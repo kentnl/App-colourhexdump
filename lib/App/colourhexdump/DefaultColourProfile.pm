@@ -40,6 +40,7 @@ See L<App::colourhexdump::ColourProfile/get_colour_for>
 
 =cut
 
+## no critic ( Subroutines::RequireArgUnpacking )
 sub get_colour_for {
   my ( $self, $char ) = ( $_[0], $_[1] );
 
@@ -47,8 +48,8 @@ sub get_colour_for {
   return BOLD . BRIGHT_BLUE             if $char =~ /\n/;
   return BLUE                           if $char =~ / /;
   return BOLD . BRIGHT_BLUE . ON_YELLOW if $char =~ /\t/;
-  return RED                            if $char =~ /[^[:print:]]/;
-  return                                if $char =~ /[a-zA-Z0-9]/;
+  return RED                            if $char =~ qr{[^[:print:]]};
+  return                                if $char =~ qr{[a-zA-Z0-9]};
   return YELLOW;
 }
 
@@ -58,10 +59,12 @@ See L<App::colourhexdump::ColourProfile/get_display_symbol_for>
 
 =cut
 
+## no critic ( Subroutines::RequireArgUnpacking )
+
 sub get_display_symbol_for {
   my ( $self, $char ) = ( $_[0], $_[1] );
-  return '_' if $char =~ /[\n\r\t ]/;
-  return '.' if $char =~ /[^[:print:]]/;
+  return q{_} if $char =~ qr{[\n\r\t ]};
+  return q{.} if $char =~ qr{[^[:print:]]};
   return $char;
 }
 

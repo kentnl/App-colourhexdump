@@ -69,13 +69,15 @@ Wraps L<get_colour_for> and returns either a string sequence or ''.
 
 =cut
 
+## no critic ( RequireArgUnpacking )
+
 sub get_string_pre {
   my ( $self, $char ) = ( $_[0], $_[1] );
   my $colourcode = $self->get_colour_for($char);
   if ( defined $colourcode ) {
     return $colourcode;
   }
-  return '';
+  return q{};
 }
 
 =head2 get_string_post
@@ -85,13 +87,15 @@ on what was returned.
 
 =cut
 
+## no critic ( RequireArgUnpacking )
+
 sub get_string_post {
   my ( $self, $char ) = ( $_[0], $_[1] );
   my $colourcode = $self->get_colour_for($char);
   if ( defined $colourcode ) {
     return RESET;
   }
-  return '';
+  return q{};
 }
 
 no Moose::Role;

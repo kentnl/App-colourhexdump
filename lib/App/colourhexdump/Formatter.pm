@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump::Formatter;
 
-# ABSTRACT: Colour-Hilight lines of data as hex.
+# ABSTRACT: Colour-Highlight lines of data as hex.
 
 use Moose;
 use String::RewritePrefix;
@@ -18,7 +18,7 @@ has colour_profile => (
   does       => 'App::colourhexdump::ColourProfile',
   is         => 'rw',
   lazy_build => 1,
-  init_arg   => undef
+  init_arg   => undef,
 );
 
 has real_colour_profile_class => (
@@ -32,7 +32,7 @@ has colour_profile_class => (
   isa      => 'Str',
   is       => 'rw',
   init_arg => 'colour_profile',
-  default  => 'DefaultColourProfile'
+  default  => 'DefaultColourProfile',
 );
 
 has row_length => (
@@ -80,6 +80,17 @@ sub _build_hex_row_length {
 
 }
 
+=method format_foreach_in_fh
+
+    $formatter->format_foreach_in_fh( $fh, sub {
+        my $formatted = shift;
+        print $formatted;
+    });
+
+=cut
+
+## no critic ( Subroutines::RequireArgUnpacking )
+
 sub format_foreach_in_fh {
   my ( $self, $fh, $callback ) = ( $_[0], $_[1], $_[2] );
   my $offset = 0;
@@ -87,7 +98,16 @@ sub format_foreach_in_fh {
     $callback->( $self->format_row( $buffer, $offset ) );
     $offset += $self->row_length;
   }
+  return 1;
 }
+
+=method format_row_from_fh {
+
+    my ( $formatted , $offset ) = $formatter->format_row_from_fh( $fh, $offset );
+
+=cut
+
+## no critic ( Subroutines::RequireArgUnpacking )
 
 sub format_row_from_fh {
   my ( $self, $fh, $offset ) = ( $_[0], $_[1], $_[2] );
@@ -97,16 +117,28 @@ sub format_row_from_fh {
   return $str, $offset;
 }
 
+=method format_row
+
+    my $formatted = $formatter->format_row( "Some Characters", $offset );
+
+=cut
+
 sub format_row {
   my ( $self, $row, $offset ) = @_;
 
   my $format = "%10s: %s   %s\n";
-  my $offset_hex = _to_hex( pack "N*", $offset );
+  my $offset_hex = _to_hex( pack q{N*}, $offset );
 
   my @chars = split //, $row;
 
   return sprintf $format, $offset_hex, $self->pad_hex_row( $self->hex_encode(@chars) ), $self->pretty_encode(@chars);
 }
+
+=method hex_encode
+
+    my $hexes = $formatter->hex_encode( split //, "Some Characters" );
+
+=cut
 
 sub hex_encode {
   my ( $self, @chars ) = @_;
@@ -124,6 +156,12 @@ sub hex_encode {
   return join q{ }, @out;
 }
 
+=method pretty_encode
+
+    my $nicetext = $formatter->pretty_encode( split //, "Some Characters" );
+
+=cut
+
 sub pretty_encode {
   my ( $self, @chars ) = @_;
   my $output;
@@ -136,12 +174,18 @@ sub pretty_encode {
 }
 
 sub _to_hex {
-  return join q{}, map { unpack "H*", $_ } @_;
+  return join q{}, map { unpack q{H*}, $_ } @_;
 }
+
+=method pad_hex_row
+
+    my $padded = $Formatter->pad_hex_row( $formatter->hex_enode( split //, "Some Characters" ) );
+
+=cut
 
 sub pad_hex_row {
   my ( $self, $row ) = @_;
-  my $length = length( colorstrip($row) );
+  my $length = length colorstrip($row);
   if ( $length > $self->hex_row_length ) {
     return $row;
   }
@@ -156,7 +200,7 @@ sub _build_colour_profile {
 
 sub _build_real_colour_profile_class {
   my $self = shift;
-  return String::RewritePrefix->rewrite( { '' => 'App::colourhexdump::', '=' => '' }, $self->colour_profile_class );
+  return String::RewritePrefix->rewrite( { q{} => 'App::colourhexdump::', q{=} => q{} }, $self->colour_profile_class );
 }
 
 __PACKAGE__->meta->make_immutable;
