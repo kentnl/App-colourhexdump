@@ -3,14 +3,19 @@ use warnings;
 
 package App::colourhexdump;
 
+# ABSTRACT: HexDump, but with character-class highlighting.
+
 use Moose;
 with qw( MooseX::Getopt::GLD MooseX::Getopt::Dashes );
 
 use Getopt::Long::Descriptive;
 use Term::ANSIColor qw( colorstrip );
 use App::colourhexdump::Formatter;
-
 use namespace::autoclean;
+
+=head1 SYNOPSIS
+
+=cut
 
 has colour_profile => (
   metaclass     => 'Getopt',

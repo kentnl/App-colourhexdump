@@ -2,11 +2,9 @@
 use strict;
 use warnings;
 
-
-use strict;
-use warnings;
-
 package App::colourhexdump::Formatter;
+
+# ABSTRACT: Colour-Hilight lines of data as hex.
 
 use Moose;
 use String::RewritePrefix;
