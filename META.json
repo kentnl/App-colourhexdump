@@ -46,7 +46,7 @@
             "MooseX::Getopt::Dashes" : 0,
             "MooseX::Getopt::GLD" : 0,
             "String::RewritePrefix" : 0,
-            "Term::ANSIColor" : 0,
+            "Term::ANSIColor" : "3.00",
             "namespace::autoclean" : 0
          }
       },
@@ -62,19 +62,19 @@
    "provides" : {
       "App::colourhexdump" : {
          "file" : "lib/App/colourhexdump.pm",
-         "version" : "0.01000020"
+         "version" : "0.01000103"
       },
       "App::colourhexdump::ColourProfile" : {
          "file" : "lib/App/colourhexdump/ColourProfile.pm",
-         "version" : "0.01000020"
+         "version" : "0.01000103"
       },
       "App::colourhexdump::DefaultColourProfile" : {
          "file" : "lib/App/colourhexdump/DefaultColourProfile.pm",
-         "version" : "0.01000020"
+         "version" : "0.01000103"
       },
       "App::colourhexdump::Formatter" : {
          "file" : "lib/App/colourhexdump/Formatter.pm",
-         "version" : "0.01000020"
+         "version" : "0.01000103"
       }
    },
    "release_status" : "stable",
@@ -86,7 +86,7 @@
          "web" : "http://github.com/kentfredric/App-colourhexdump/tree"
       }
    },
-   "version" : "0.01000020",
+   "version" : "0.01000103",
    "x_BuiltWith" : {
       "modules" : {
          "Carp" : "1.17",

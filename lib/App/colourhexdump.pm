@@ -3,7 +3,7 @@ use warnings;
 
 package App::colourhexdump;
 BEGIN {
-  $App::colourhexdump::VERSION = '0.01000020';
+  $App::colourhexdump::VERSION = '0.01000103';
 }
 
 # ABSTRACT: HexDump, but with character-class highlighting.
@@ -12,7 +12,7 @@ use Moose;
 with qw( MooseX::Getopt::GLD MooseX::Getopt::Dashes );
 
 use Getopt::Long::Descriptive;
-use Term::ANSIColor qw( colorstrip );
+use Term::ANSIColor 3.00 qw( colorstrip );
 use App::colourhexdump::Formatter;
 use namespace::autoclean;
 
@@ -153,7 +153,7 @@ App::colourhexdump - HexDump, but with character-class highlighting.
 
 =head1 VERSION
 
-version 0.01000020
+version 0.01000103
 
 =head1 SYNOPSIS
 
@@ -172,6 +172,8 @@ It can be used like so
     colourhexdump  file/a.txt file/b.txt -- --this-is-treated-like-a-file.txt
 
 If you are using an HTML-enabled POD viewer, you should see a screenshot of this in action:
+
+( Everyone else can visit L<https://github.com/kentfredric/App-colourhexdump/raw/images/Screenshot.png> )
 
 =for html <center><img src="https://github.com/kentfredric/App-colourhexdump/raw/images/Screenshot.png" alt="Screenshot with explanation of colours" width="826" height="838"/></center>
 

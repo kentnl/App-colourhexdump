@@ -2,7 +2,7 @@ NAME
     App::colourhexdump - HexDump, but with character-class highlighting.
 
 VERSION
-    version 0.01000020
+    version 0.01000103
 
 SYNOPSIS
         usage: colourhexdump [-?Ccfrx] [long options...]
@@ -21,6 +21,10 @@ SYNOPSIS
 
     If you are using an HTML-enabled POD viewer, you should see a screenshot
     of this in action:
+
+    ( Everyone else can visit
+    <https://github.com/kentfredric/App-colourhexdump/raw/images/Screenshot.
+    png> )
 
 METHODS
   BUILD

@@ -63,7 +63,7 @@ eval { $v .= pmver('Moose::Role','any version') };
 eval { $v .= pmver('MooseX::Getopt::Dashes','any version') };
 eval { $v .= pmver('MooseX::Getopt::GLD','any version') };
 eval { $v .= pmver('String::RewritePrefix','any version') };
-eval { $v .= pmver('Term::ANSIColor','any version') };
+eval { $v .= pmver('Term::ANSIColor','3.00') };
 eval { $v .= pmver('Test::More','0.88') };
 eval { $v .= pmver('namespace::autoclean','any version') };
 

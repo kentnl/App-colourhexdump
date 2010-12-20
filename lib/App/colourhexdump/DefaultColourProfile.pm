@@ -3,7 +3,7 @@ use warnings;
 
 package App::colourhexdump::DefaultColourProfile;
 BEGIN {
-  $App::colourhexdump::DefaultColourProfile::VERSION = '0.01000020';
+  $App::colourhexdump::DefaultColourProfile::VERSION = '0.01000103';
 }
 
 # ABSTRACT: The default colour profile
@@ -14,7 +14,7 @@ use namespace::autoclean;
 
 with 'App::colourhexdump::ColourProfile';
 
-use Term::ANSIColor qw(:constants);
+use Term::ANSIColor 3.00 qw(:constants);
 
 
 ## no critic ( Subroutines::RequireArgUnpacking )
@@ -54,7 +54,7 @@ App::colourhexdump::DefaultColourProfile - The default colour profile
 
 =head1 VERSION
 
-version 0.01000020
+version 0.01000103
 
 =head1 SYNOPSIS
 

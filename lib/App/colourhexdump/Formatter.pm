@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump::Formatter;
 BEGIN {
-  $App::colourhexdump::Formatter::VERSION = '0.01000020';
+  $App::colourhexdump::Formatter::VERSION = '0.01000103';
 }
 
 # ABSTRACT: Colour-Highlight lines of data as hex.
@@ -12,7 +12,7 @@ BEGIN {
 use Moose;
 use String::RewritePrefix;
 use Class::Load 0.06 qw( load_class );
-use Term::ANSIColor qw( colorstrip );
+use Term::ANSIColor 3.00 qw( colorstrip );
 use List::MoreUtils qw( natatime );
 
 use namespace::autoclean;
@@ -187,7 +187,7 @@ App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
 
 =head1 VERSION
 
-version 0.01000020
+version 0.01000103
 
 =head1 METHODS
 

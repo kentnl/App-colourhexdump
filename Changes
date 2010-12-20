@@ -1,5 +1,10 @@
 Revision history for App-colourhexdump
 
+0.01000103 2010-12-21 08:02:48 Pacific/Auckland
+          Depend on Term::ANSIColour 3.00. A Few silly people don't have that.
+
+          Add a doclink to the image
+
 0.01000020 2010-12-21 01:42:25 Pacific/Auckland
           First version.
 

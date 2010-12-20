@@ -21,7 +21,7 @@ my %module_build_args = (
     'Kent Fredric <kentnl@cpan.org>'
   ],
   'dist_name' => 'App-colourhexdump',
-  'dist_version' => '0.01000020',
+  'dist_version' => '0.01000103',
   'license' => 'perl',
   'module_name' => 'App::colourhexdump',
   'recommends' => {},
@@ -36,7 +36,7 @@ my %module_build_args = (
     'MooseX::Getopt::Dashes' => '0',
     'MooseX::Getopt::GLD' => '0',
     'String::RewritePrefix' => '0',
-    'Term::ANSIColor' => '0',
+    'Term::ANSIColor' => '3.00',
     'namespace::autoclean' => '0'
   },
   'script_files' => [
