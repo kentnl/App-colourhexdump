@@ -3,7 +3,11 @@
 use strict;
 use warnings;
 
+package    #  hide me
+  App::colourhexdump::stub;
+
 use App::colourhexdump;
 
 App::colourhexdump->new_with_options()->run();
 
+1;
