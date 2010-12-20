@@ -9,7 +9,7 @@ package App::colourhexdump::Formatter;
 use Moose;
 use String::RewritePrefix;
 use Class::Load 0.06 qw( load_class );
-use Term::ANSIColor qw( colorstrip );
+use Term::ANSIColor 3.00 qw( colorstrip );
 use List::MoreUtils qw( natatime );
 
 use namespace::autoclean;

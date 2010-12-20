@@ -32,7 +32,7 @@ Invocation:
 
 with 'App::colourhexdump::ColourProfile';
 
-use Term::ANSIColor qw(:constants);
+use Term::ANSIColor 3.00 qw(:constants);
 
 =method get_colour_for
 

@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          Depend on Term::ANSIColour 3.00. A Few silly people don't have that.
+
+          Add a doclink to the image
 
 0.01000020 2010-12-21 01:42:25 Pacific/Auckland
           First version.
