@@ -2,11 +2,63 @@ use strict;
 use warnings;
 
 package App::colourhexdump::ColourProfile;
+BEGIN {
+  $App::colourhexdump::ColourProfile::VERSION = '0.01000020';
+}
 
 # ABSTRACT: A Role for Colour Profiles
 
 use Moose::Role;
 use namespace::autoclean;
+
+
+
+requires 'get_colour_for';
+
+
+requires 'get_display_symbol_for';
+
+use Term::ANSIColor qw(:constants);
+
+
+## no critic ( RequireArgUnpacking )
+
+sub get_string_pre {
+  my ( $self, $char ) = ( $_[0], $_[1] );
+  my $colourcode = $self->get_colour_for($char);
+  if ( defined $colourcode ) {
+    return $colourcode;
+  }
+  return q{};
+}
+
+
+## no critic ( RequireArgUnpacking )
+
+sub get_string_post {
+  my ( $self, $char ) = ( $_[0], $_[1] );
+  my $colourcode = $self->get_colour_for($char);
+  if ( defined $colourcode ) {
+    return RESET;
+  }
+  return q{};
+}
+
+no Moose::Role;
+
+1;
+
+
+__END__
+=pod
+
+=head1 NAME
+
+App::colourhexdump::ColourProfile - A Role for Colour Profiles
+
+=head1 VERSION
+
+version 0.01000020
 
 =head1 SYNOPSIS
 
@@ -28,9 +80,6 @@ use namespace::autoclean;
         return $char;        # printable
     }
 
-
-=cut
-
 =head1 REQUIRED
 
 =head2 get_colour_for
@@ -45,21 +94,11 @@ Don't worry about resetting things, we put a ^[[0m in for you.
 
 Return C<undef> if you do not wish to apply colouring.
 
-=cut
-
-requires 'get_colour_for';
-
 =head2 get_display_symbol_for
 
     my $symbol = $object->get_display_symbol_for( "\n" );
 
 Returns a user viewable alternative to the matched string.
-
-=cut
-
-requires 'get_display_symbol_for';
-
-use Term::ANSIColor qw(:constants);
 
 =head1 PROVIDED
 
@@ -67,38 +106,21 @@ use Term::ANSIColor qw(:constants);
 
 Wraps L<get_colour_for> and returns either a string sequence or ''.
 
-=cut
-
-## no critic ( RequireArgUnpacking )
-
-sub get_string_pre {
-  my ( $self, $char ) = ( $_[0], $_[1] );
-  my $colourcode = $self->get_colour_for($char);
-  if ( defined $colourcode ) {
-    return $colourcode;
-  }
-  return q{};
-}
-
 =head2 get_string_post
 
 Wraps L<get_colour_for> and returns either an ANSI Reset Code, or '', depending
 on what was returned.
 
+=head1 AUTHOR
+
+Kent Fredric <kentnl@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Kent Fredric <kentnl@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
-
-## no critic ( RequireArgUnpacking )
-
-sub get_string_post {
-  my ( $self, $char ) = ( $_[0], $_[1] );
-  my $colourcode = $self->get_colour_for($char);
-  if ( defined $colourcode ) {
-    return RESET;
-  }
-  return q{};
-}
-
-no Moose::Role;
-
-1;
 

@@ -3,6 +3,9 @@ use strict;
 use warnings;
 
 package App::colourhexdump::Formatter;
+BEGIN {
+  $App::colourhexdump::Formatter::VERSION = '0.01000020';
+}
 
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
@@ -80,14 +83,6 @@ sub _build_hex_row_length {
 
 }
 
-=method format_foreach_in_fh
-
-    $formatter->format_foreach_in_fh( $fh, sub {
-        my $formatted = shift;
-        print $formatted;
-    });
-
-=cut
 
 ## no critic ( Subroutines::RequireArgUnpacking )
 
@@ -101,11 +96,6 @@ sub format_foreach_in_fh {
   return 1;
 }
 
-=method format_row_from_fh {
-
-    my ( $formatted , $offset ) = $formatter->format_row_from_fh( $fh, $offset );
-
-=cut
 
 ## no critic ( Subroutines::RequireArgUnpacking )
 
@@ -117,11 +107,6 @@ sub format_row_from_fh {
   return $str, $offset;
 }
 
-=method format_row
-
-    my $formatted = $formatter->format_row( "Some Characters", $offset );
-
-=cut
 
 sub format_row {
   my ( $self, $row, $offset ) = @_;
@@ -134,11 +119,6 @@ sub format_row {
   return sprintf $format, $offset_hex, $self->pad_hex_row( $self->hex_encode(@chars) ), $self->pretty_encode(@chars);
 }
 
-=method hex_encode
-
-    my $hexes = $formatter->hex_encode( split //, "Some Characters" );
-
-=cut
 
 sub hex_encode {
   my ( $self, @chars ) = @_;
@@ -156,11 +136,6 @@ sub hex_encode {
   return join q{ }, @out;
 }
 
-=method pretty_encode
-
-    my $nicetext = $formatter->pretty_encode( split //, "Some Characters" );
-
-=cut
 
 sub pretty_encode {
   my ( $self, @chars ) = @_;
@@ -177,11 +152,6 @@ sub _to_hex {
   return join q{}, map { unpack q{H*}, $_ } @_;
 }
 
-=method pad_hex_row
-
-    my $padded = $Formatter->pad_hex_row( $formatter->hex_enode( split //, "Some Characters" ) );
-
-=cut
 
 sub pad_hex_row {
   my ( $self, $row ) = @_;
@@ -206,4 +176,58 @@ sub _build_real_colour_profile_class {
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
+
+
+__END__
+=pod
+
+=head1 NAME
+
+App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
+
+=head1 VERSION
+
+version 0.01000020
+
+=head1 METHODS
+
+=head2 format_foreach_in_fh
+
+    $formatter->format_foreach_in_fh( $fh, sub {
+        my $formatted = shift;
+        print $formatted;
+    });
+
+=head2 format_row_from_fh {
+
+    my ( $formatted , $offset ) = $formatter->format_row_from_fh( $fh, $offset );
+
+=head2 format_row
+
+    my $formatted = $formatter->format_row( "Some Characters", $offset );
+
+=head2 hex_encode
+
+    my $hexes = $formatter->hex_encode( split //, "Some Characters" );
+
+=head2 pretty_encode
+
+    my $nicetext = $formatter->pretty_encode( split //, "Some Characters" );
+
+=head2 pad_hex_row
+
+    my $padded = $Formatter->pad_hex_row( $formatter->hex_enode( split //, "Some Characters" ) );
+
+=head1 AUTHOR
+
+Kent Fredric <kentnl@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Kent Fredric <kentnl@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
 

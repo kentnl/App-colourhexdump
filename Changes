@@ -1,6 +1,4 @@
-Revision history for {{$dist->name}}
-
-{{$NEXT}}
+Revision history for App-colourhexdump
 
 0.01000020 2010-12-21 01:42:25 Pacific/Auckland
           First version.

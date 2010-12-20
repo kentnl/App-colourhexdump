@@ -1,0 +1,49 @@
+NAME
+    App::colourhexdump - HexDump, but with character-class highlighting.
+
+VERSION
+    version 0.01000020
+
+SYNOPSIS
+        usage: colourhexdump [-?Ccfrx] [long options...]
+            -? --usage --help                     Prints this usage information.
+            --color-profile -C --colour-profile   Backend to use for colour highlighting (DefaultColourProfile)
+            --row -r --row-length                 Number of bytes per display row (32).
+            --chunk -x --chunk-length             Number of bytes per display hex display group (4).
+            -f --file                             Add a file to the list of files to process. '-' for STDIN.
+            --show-file-prefix                    Enable printing the filename on the start of every line ( off ).
+            --show-file-heading                   Enable printing the filename before the hexdump output. ( off ).
+            --color -c --colour                   Enable coloured output ( on ). --no-colour to disable.
+
+    It can be used like so
+
+        colourhexdump  file/a.txt file/b.txt -- --this-is-treated-like-a-file.txt
+
+    If you are using an HTML-enabled POD viewer, you should see a screenshot
+    of this in action:
+
+METHODS
+  BUILD
+    This just pushes extra_argv from getopt into the files list.
+
+    INTERNAL
+
+  get_filehandle
+        my $fh = $self->get_filehandle( $filename_or_stdindash );
+
+    INTERNAL
+
+  run
+    Run the app.
+
+        App::colourhexdump->new_with_options()->run();
+
+AUTHOR
+    Kent Fredric <kentnl@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Kent Fredric <kentnl@cpan.org>.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

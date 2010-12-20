@@ -2,6 +2,9 @@ use strict;
 use warnings;
 
 package App::colourhexdump;
+BEGIN {
+  $App::colourhexdump::VERSION = '0.01000020';
+}
 
 # ABSTRACT: HexDump, but with character-class highlighting.
 
@@ -13,29 +16,6 @@ use Term::ANSIColor qw( colorstrip );
 use App::colourhexdump::Formatter;
 use namespace::autoclean;
 
-=head1 SYNOPSIS
-
-    usage: colourhexdump [-?Ccfrx] [long options...]
-        -? --usage --help                     Prints this usage information.
-        --color-profile -C --colour-profile   Backend to use for colour highlighting (DefaultColourProfile)
-        --row -r --row-length                 Number of bytes per display row (32).
-        --chunk -x --chunk-length             Number of bytes per display hex display group (4).
-        -f --file                             Add a file to the list of files to process. '-' for STDIN.
-        --show-file-prefix                    Enable printing the filename on the start of every line ( off ).
-        --show-file-heading                   Enable printing the filename before the hexdump output. ( off ).
-        --color -c --colour                   Enable coloured output ( on ). --no-colour to disable.
-
-It can be used like so
-
-    colourhexdump  file/a.txt file/b.txt -- --this-is-treated-like-a-file.txt
-
-If you are using an HTML-enabled POD viewer, you should see a screenshot of this in action:
-
-=for html <center><img src="https://github.com/kentfredric/App-colourhexdump/raw/images/Screenshot.png" alt="Screenshot with explanation of colours" width="826" height="838"/></center>
-
-
-
-=cut
 
 has colour_profile => (
   metaclass     => 'Getopt',
@@ -101,13 +81,6 @@ has 'colour' => (
 
 );
 
-=method BUILD
-
-This just pushes extra_argv from getopt into the files list.
-
-B<INTERNAL>
-
-=cut
 
 sub BUILD {
   my $self = shift;
@@ -116,13 +89,6 @@ sub BUILD {
 
 }
 
-=method get_filehandle
-
-    my $fh = $self->get_filehandle( $filename_or_stdindash );
-
-B<INTERNAL>
-
-=cut
 
 
 sub get_filehandle {
@@ -135,13 +101,6 @@ sub get_filehandle {
   return $fh;
 }
 
-=method run
-
-Run the app.
-
-    App::colourhexdump->new_with_options()->run();
-
-=cut
 
 sub run {
   my $self = shift;
@@ -184,3 +143,68 @@ sub run {
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
+
+__END__
+=pod
+
+=head1 NAME
+
+App::colourhexdump - HexDump, but with character-class highlighting.
+
+=head1 VERSION
+
+version 0.01000020
+
+=head1 SYNOPSIS
+
+    usage: colourhexdump [-?Ccfrx] [long options...]
+        -? --usage --help                     Prints this usage information.
+        --color-profile -C --colour-profile   Backend to use for colour highlighting (DefaultColourProfile)
+        --row -r --row-length                 Number of bytes per display row (32).
+        --chunk -x --chunk-length             Number of bytes per display hex display group (4).
+        -f --file                             Add a file to the list of files to process. '-' for STDIN.
+        --show-file-prefix                    Enable printing the filename on the start of every line ( off ).
+        --show-file-heading                   Enable printing the filename before the hexdump output. ( off ).
+        --color -c --colour                   Enable coloured output ( on ). --no-colour to disable.
+
+It can be used like so
+
+    colourhexdump  file/a.txt file/b.txt -- --this-is-treated-like-a-file.txt
+
+If you are using an HTML-enabled POD viewer, you should see a screenshot of this in action:
+
+=for html <center><img src="https://github.com/kentfredric/App-colourhexdump/raw/images/Screenshot.png" alt="Screenshot with explanation of colours" width="826" height="838"/></center>
+
+=head1 METHODS
+
+=head2 BUILD
+
+This just pushes extra_argv from getopt into the files list.
+
+B<INTERNAL>
+
+=head2 get_filehandle
+
+    my $fh = $self->get_filehandle( $filename_or_stdindash );
+
+B<INTERNAL>
+
+=head2 run
+
+Run the app.
+
+    App::colourhexdump->new_with_options()->run();
+
+=head1 AUTHOR
+
+Kent Fredric <kentnl@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Kent Fredric <kentnl@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
