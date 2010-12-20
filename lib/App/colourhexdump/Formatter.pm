@@ -1,0 +1,167 @@
+
+use strict;
+use warnings;
+
+
+use strict;
+use warnings;
+
+package App::colourhexdump::Formatter;
+
+use Moose;
+use String::RewritePrefix;
+use Class::Load 0.06 qw( load_class );
+use Term::ANSIColor qw( colorstrip );
+use List::MoreUtils qw( natatime );
+
+use namespace::autoclean;
+
+has colour_profile => (
+  does       => 'App::colourhexdump::ColourProfile',
+  is         => 'rw',
+  lazy_build => 1,
+  init_arg   => undef
+);
+
+has real_colour_profile_class => (
+  isa        => 'Str',
+  is         => 'rw',
+  lazy_build => 1,
+  init_arg   => undef,
+);
+
+has colour_profile_class => (
+  isa      => 'Str',
+  is       => 'rw',
+  init_arg => 'colour_profile',
+  default  => 'DefaultColourProfile'
+);
+
+has row_length => (
+  isa     => 'Int',
+  is      => 'ro',
+  default => 32,
+);
+
+has chunk_length => (
+  isa     => 'Int',
+  is      => 'rw',
+  default => 4,
+);
+
+has hex_row_length => (
+  isa        => 'Int',
+  is         => 'rw',
+  lazy_build => 1,
+  init_arg   => undef,
+);
+
+sub _build_hex_row_length {
+  my $self = shift;
+
+  # Each byte takes 2 bytes to print.
+  #
+  if ( $self->chunk_length > $self->row_length ) {
+    $self->chunk_length( $self->row_length );
+  }
+  my $real_chunk_length = $self->chunk_length * 2;
+
+  my $chunks     = int( $self->row_length / $self->chunk_length );
+  my $extrachunk = 0;
+
+  if ( ( $chunks * $self->chunk_length ) < $self->row_length ) {
+    $extrachunk = $self->row_length - ( $chunks * $self->chunk_length );
+  }
+
+  my $whitespaces = $chunks - 1;
+  if ( $extrachunk > 0 ) {
+    $whitespaces++;
+  }
+
+  return ( $chunks * $real_chunk_length ) + $whitespaces + $extrachunk;
+
+}
+
+sub format_foreach_in_fh {
+  my ( $self, $fh, $callback ) = ( $_[0], $_[1], $_[2] );
+  my $offset = 0;
+  while ( read $fh, my $buffer, $self->row_length ) {
+    $callback->( $self->format_row( $buffer, $offset ) );
+    $offset += $self->row_length;
+  }
+}
+
+sub format_row_from_fh {
+  my ( $self, $fh, $offset ) = ( $_[0], $_[1], $_[2] );
+  read $fh, my $buffer, $self->row_length or return;
+  my $str = $self->format_row( $buffer, $offset );
+  $offset += $self->row_length;
+  return $str, $offset;
+}
+
+sub format_row {
+  my ( $self, $row, $offset ) = @_;
+
+  my $format = "%10s: %s   %s\n";
+  my $offset_hex = _to_hex( pack "N*", $offset );
+
+  my @chars = split //, $row;
+
+  return sprintf $format, $offset_hex, $self->pad_hex_row( $self->hex_encode(@chars) ), $self->pretty_encode(@chars);
+}
+
+sub hex_encode {
+  my ( $self, @chars ) = @_;
+  my $it = natatime $self->chunk_length, @chars;
+  my @out;
+  while ( my @vals = $it->() ) {
+    my $chunk;
+    for (@vals) {
+      $chunk .= $self->colour_profile->get_string_pre($_);
+      $chunk .= _to_hex($_);
+      $chunk .= $self->colour_profile->get_string_post($_);
+    }
+    push @out, $chunk;
+  }
+  return join q{ }, @out;
+}
+
+sub pretty_encode {
+  my ( $self, @chars ) = @_;
+  my $output;
+  for (@chars) {
+    $output .= $self->colour_profile->get_string_pre($_);
+    $output .= $self->colour_profile->get_display_symbol_for($_);
+    $output .= $self->colour_profile->get_string_post($_);
+  }
+  return $output;
+}
+
+sub _to_hex {
+  return join q{}, map { unpack "H*", $_ } @_;
+}
+
+sub pad_hex_row {
+  my ( $self, $row ) = @_;
+  my $length = length( colorstrip($row) );
+  if ( $length > $self->hex_row_length ) {
+    return $row;
+  }
+  return $row . ( q{ } x ( $self->hex_row_length - $length ) );
+}
+
+sub _build_colour_profile {
+  my $self = shift;
+  load_class( $self->real_colour_profile_class );
+  return $self->real_colour_profile_class->new();
+}
+
+sub _build_real_colour_profile_class {
+  my $self = shift;
+  return String::RewritePrefix->rewrite( { '' => 'App::colourhexdump::', '=' => '' }, $self->colour_profile_class );
+}
+
+__PACKAGE__->meta->make_immutable;
+no Moose;
+1;
+

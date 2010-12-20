@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use App::colourhexdump;
+
+App::colourhexdump->new_with_options()->run();
+
