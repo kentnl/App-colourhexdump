@@ -3,7 +3,7 @@ use warnings;
 
 package App::colourhexdump::ColourProfile;
 BEGIN {
-  $App::colourhexdump::ColourProfile::VERSION = '0.01000103';
+  $App::colourhexdump::ColourProfile::VERSION = '0.01011315';
 }
 
 # ABSTRACT: A Role for Colour Profiles
@@ -18,7 +18,7 @@ requires 'get_colour_for';
 
 requires 'get_display_symbol_for';
 
-use Term::ANSIColor qw(:constants);
+use Term::ANSIColor 3.00 qw(:constants);
 
 
 ## no critic ( RequireArgUnpacking )
@@ -58,7 +58,7 @@ App::colourhexdump::ColourProfile - A Role for Colour Profiles
 
 =head1 VERSION
 
-version 0.01000103
+version 0.01011315
 
 =head1 SYNOPSIS
 
@@ -117,7 +117,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

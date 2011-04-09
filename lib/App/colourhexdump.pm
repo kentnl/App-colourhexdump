@@ -3,13 +3,14 @@ use warnings;
 
 package App::colourhexdump;
 BEGIN {
-  $App::colourhexdump::VERSION = '0.01000103';
+  $App::colourhexdump::VERSION = '0.01011315';
 }
 
 # ABSTRACT: HexDump, but with character-class highlighting.
 
 use Moose;
-with qw( MooseX::Getopt::GLD MooseX::Getopt::Dashes );
+use MooseX::Getopt::Dashes 0.37;
+with qw( MooseX::Getopt::Dashes );
 
 use Getopt::Long::Descriptive;
 use Term::ANSIColor 3.00 qw( colorstrip );
@@ -153,7 +154,7 @@ App::colourhexdump - HexDump, but with character-class highlighting.
 
 =head1 VERSION
 
-version 0.01000103
+version 0.01011315
 
 =head1 SYNOPSIS
 
@@ -203,7 +204,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
