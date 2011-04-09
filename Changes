@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.01011315 2011-04-09T07:44:09Z
  [Bugfix]
  - rt#67341 : Moose bailing due to role collision should be solved in this
    release. It would appear I was implicitly importing the same role twice
