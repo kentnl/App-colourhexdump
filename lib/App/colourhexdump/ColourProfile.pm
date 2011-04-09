@@ -59,7 +59,7 @@ Returns a user viewable alternative to the matched string.
 
 requires 'get_display_symbol_for';
 
-use Term::ANSIColor qw(:constants);
+use Term::ANSIColor 3.00 qw(:constants);
 
 =head1 PROVIDED
 
