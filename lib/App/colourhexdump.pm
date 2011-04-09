@@ -6,7 +6,8 @@ package App::colourhexdump;
 # ABSTRACT: HexDump, but with character-class highlighting.
 
 use Moose;
-with qw( MooseX::Getopt::GLD MooseX::Getopt::Dashes );
+use MooseX::Getopt::Dashes 0.37;
+with qw( MooseX::Getopt::Dashes );
 
 use Getopt::Long::Descriptive;
 use Term::ANSIColor 3.00 qw( colorstrip );

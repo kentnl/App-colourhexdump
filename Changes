@@ -1,8 +1,17 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+ [Bugfix]
+ - rt#67341 : Moose bailing due to role collision should be solved in this release.
+   It would appear I was implicitly importing the same role twice for some reason.
+   Thanks Andreas J. König ( ANDK ) for reporting.
+
  [Packaging]
  - moved to @Author::KENTNL
+
+ [Dependencies]
+ - MooseX::Getopt 0.37 is now a minimal requirement.
+
 
 0.01000103 2010-12-21 08:02:48 Pacific/Auckland
           Depend on Term::ANSIColour 3.00. A Few silly people don't have that.
