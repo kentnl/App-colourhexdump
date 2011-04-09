@@ -8,10 +8,26 @@ Revision history for {{$dist->name}}
 
  [Dependencies]
  - MooseX::Getopt 0.37 is now a minimal requirement.
+ - Dependency is now only on ::Dashes, not GLD.
+
+ [Dependencies:Devel]
+ - Advertises @Author::KENTNL
+
+ [Internal Notes]
+ - previously used "with qw( ::GLD ::Dashes )" in main package, as if
+   memory  serves correctly, at some past point this was required for
+   correct behaviour.  However, this is no longer true, and ::Dashes now
+   imports ::GLD, so if they're both  specified by us, it will be like
+   importing ::GLD twice, which will obviously trigger a symbol collision.
 
  [Packaging]
  - moved to @Author::KENTNL
  - Normalise Changelog for CPAN::Changes.
+ - ship perltidyrc
+
+ [Tests]
+ - Adds CPAN::Changes tests
+ - Drops portability tests
 
 0.01000103 2010-12-20T19:02:48Z
  - Depend on Term::ANSIColour 3.00. A Few silly people don't have that.
