@@ -1,4 +1,33 @@
-Revision history for App-colourhexdump
+﻿Revision history for App-colourhexdump
+
+0.01011316 2012-03-12T11:37:10Z
+ - Maintenance release.
+
+ [Dependencies::Changed]
+ - develop suggests: Dist::Zilla::PluginBundle::Author::KENTNL
+   v1.0.0 -> v1.2.0
+
+ [Dependencies::New]
+ - runtime requires: perl 5.006
+ - runtime requires: strict
+ - runtime requires: warnings
+
+ [Dependencies::Removed]
+ - test requires: English
+
+ [Internals]
+ - VERSION declaration moved out of BEGIN
+ - All packages declare $AUTHORITY
+
+ [Packaging]
+ - Move to git versions.
+ - Update LICENSE ( Year, Indent, Address )
+ - Moved author/release tests to xt/
+ - Github uri's moved to https://
+ - Declare x_authority
+
+ [Tests]
+ - regenerated 00-compile.t
 
 0.01011315 2011-04-09T07:44:09Z
  [Bugfix]

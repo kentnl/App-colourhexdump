@@ -4,7 +4,10 @@ use warnings;
 
 package App::colourhexdump::Formatter;
 BEGIN {
-  $App::colourhexdump::Formatter::VERSION = '0.01011315';
+  $App::colourhexdump::Formatter::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $App::colourhexdump::Formatter::VERSION = '0.01011316';
 }
 
 # ABSTRACT: Colour-Highlight lines of data as hex.
@@ -187,7 +190,7 @@ App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
 
 =head1 VERSION
 
-version 0.01011315
+version 0.01011316
 
 =head1 METHODS
 
@@ -224,7 +227,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

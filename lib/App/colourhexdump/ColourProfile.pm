@@ -3,7 +3,10 @@ use warnings;
 
 package App::colourhexdump::ColourProfile;
 BEGIN {
-  $App::colourhexdump::ColourProfile::VERSION = '0.01011315';
+  $App::colourhexdump::ColourProfile::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $App::colourhexdump::ColourProfile::VERSION = '0.01011316';
 }
 
 # ABSTRACT: A Role for Colour Profiles
@@ -58,7 +61,7 @@ App::colourhexdump::ColourProfile - A Role for Colour Profiles
 
 =head1 VERSION
 
-version 0.01011315
+version 0.01011316
 
 =head1 SYNOPSIS
 
@@ -117,7 +120,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
