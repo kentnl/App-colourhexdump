@@ -1,6 +1,8 @@
 ﻿Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.01011316 2012-03-12T11:37:10Z
  - Maintenance release.
 
  [Dependencies::Changed]
