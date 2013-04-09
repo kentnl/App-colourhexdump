@@ -1,6 +1,34 @@
 ﻿Revision history for {{$dist->name}}
 
 {{$NEXT}}
+ - Maintenance Release for Module::Build 0.4004
+
+ [Dependencies::Added / develop requires]
+ - Pod::Coverage::TrustPod
+ - Test::CPAN::Meta
+ - Test::Pod 1.41
+ - Test::Pod::Coverage 1.08
+ - version 0.9901
+ [Dependencies::Changed / build requires]
+ - Module::Build 0.3601 → 0.4004
+ [Dependencies::Changed / configure requires]
+ - Module::Build 0.3601 → 0.4004
+ [Dependencies::Changed / develop recommends]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803 → v1.3.0
+ [Dependencies::Changed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL v1.2.0 → v1.7.2
+ [Dependencies::Changed / test requires]
+ - Test::More 0.88 → 0.98
+
+ [Documentation]
+ - update copyright year
+ - add README.mkdn
+
+ [Meta]
+ - bug tracker to github issues
+
+ [Packaging]
+ - utilise test_requires in Build.PL
 
 0.01011316 2012-03-12T11:37:10Z
  - Maintenance release.
