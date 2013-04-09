@@ -1,6 +1,6 @@
 ﻿Revision history for App-colourhexdump
 
-0.01011317 2013-04-09T21:28:37Z
+0.01011317 2013-04-09T21:28:54Z
  - Maintenance Release for Module::Build 0.4004
 
  [Dependencies::Added / develop requires]
