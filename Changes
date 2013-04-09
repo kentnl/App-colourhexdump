@@ -1,0 +1,69 @@
+﻿Revision history for App-colourhexdump
+
+0.01011317 2013-04-09T21:22:57Z
+
+0.01011316 2012-03-12T11:37:10Z
+ - Maintenance release.
+
+ [Dependencies::Changed]
+ - develop suggests: Dist::Zilla::PluginBundle::Author::KENTNL
+   v1.0.0 -> v1.2.0
+
+ [Dependencies::New]
+ - runtime requires: perl 5.006
+ - runtime requires: strict
+ - runtime requires: warnings
+
+ [Dependencies::Removed]
+ - test requires: English
+
+ [Internals]
+ - VERSION declaration moved out of BEGIN
+ - All packages declare $AUTHORITY
+
+ [Packaging]
+ - Move to git versions.
+ - Update LICENSE ( Year, Indent, Address )
+ - Moved author/release tests to xt/
+ - Github uri's moved to https://
+ - Declare x_authority
+
+ [Tests]
+ - regenerated 00-compile.t
+
+0.01011315 2011-04-09T07:44:09Z
+ [Bugfix]
+ - rt#67341 : Moose bailing due to role collision should be solved in this
+   release. It would appear I was implicitly importing the same role twice
+   for some reason. Thanks Andreas J. König ( ANDK ) for reporting.
+
+ [Dependencies]
+ - MooseX::Getopt 0.37 is now a minimal requirement.
+ - Dependency is now only on ::Dashes, not GLD.
+
+ [Dependencies:Devel]
+ - Advertises @Author::KENTNL
+
+ [Internal Notes]
+ - previously used "with qw( ::GLD ::Dashes )" in main package, as if
+   memory  serves correctly, at some past point this was required for
+   correct behaviour.  However, this is no longer true, and ::Dashes now
+   imports ::GLD, so if they're both  specified by us, it will be like
+   importing ::GLD twice, which will obviously trigger a symbol collision.
+
+ [Packaging]
+ - moved to @Author::KENTNL
+ - Normalise Changelog for CPAN::Changes.
+ - ship perltidyrc
+
+ [Tests]
+ - Adds CPAN::Changes tests
+ - Drops portability tests
+
+0.01000103 2010-12-20T19:02:48Z
+ - Depend on Term::ANSIColour 3.00. A Few silly people don't have that.
+ - Add a doclink to the image
+
+0.01000020 2010-12-20T12:42:25Z
+ - First version.
+
