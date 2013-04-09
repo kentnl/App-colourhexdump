@@ -1,19 +1,53 @@
 ﻿Revision history for App-colourhexdump
 
+0.01011317 2013-04-09T21:37:30Z
+ - Maintenance Release for Module::Build 0.4004
+
+ [Dependencies::Added / develop requires]
+ - Pod::Coverage::TrustPod
+ - Test::CPAN::Meta
+ - Test::Pod 1.41
+ - Test::Pod::Coverage 1.08
+ - version 0.9901
+
+ [Dependencies::Changed / build requires]
+ - Module::Build 0.3601 → 0.4004
+
+ [Dependencies::Changed / configure requires]
+ - Module::Build 0.3601 → 0.4004
+
+ [Dependencies::Changed / develop recommends]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803 → v1.3.0
+
+ [Dependencies::Changed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL v1.2.0 → v1.7.2
+
+ [Dependencies::Changed / test requires]
+ - Test::More 0.88 → 0.98
+
+ [Documentation]
+ - update copyright year
+ - add README.mkdn
+
+ [Meta]
+ - bug tracker to github issues
+
+ [Packaging]
+ - utilise test_requires in Build.PL
+
 0.01011316 2012-03-12T11:37:10Z
  - Maintenance release.
 
- [Dependencies::Changed]
- - develop suggests: Dist::Zilla::PluginBundle::Author::KENTNL
-   v1.0.0 -> v1.2.0
+ [Dependencies::Added / runtime requires]
+ - perl 5.006
+ - strict
+ - warnings
 
- [Dependencies::New]
- - runtime requires: perl 5.006
- - runtime requires: strict
- - runtime requires: warnings
+ [Dependencies::Changed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL v1.0.0 → v1.2.0
 
- [Dependencies::Removed]
- - test requires: English
+ [Dependencies::Removed / test requires]
+ - English
 
  [Internals]
  - VERSION declaration moved out of BEGIN
@@ -35,12 +69,29 @@
    release. It would appear I was implicitly importing the same role twice
    for some reason. Thanks Andreas J. König ( ANDK ) for reporting.
 
- [Dependencies]
- - MooseX::Getopt 0.37 is now a minimal requirement.
- - Dependency is now only on ::Dashes, not GLD.
+ [Dependencies::Added / develop recommends]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803
 
- [Dependencies:Devel]
- - Advertises @Author::KENTNL
+ [Dependencies::Added / develop requires]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite
+
+ [Dependencies::Added / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL
+
+ [Dependencies::Changed / runtime requires]
+ - MooseX::Getopt::Dashes 0 → 0.37
+
+ [Dependencies::Removed / develop recommends]
+ - Dist::Zilla::PluginBundle::KENTNL::Lite 0.01009803
+
+ [Dependencies::Removed / develop requires]
+ - Dist::Zilla::PluginBundle::KENTNL::Lite
+
+ [Dependencies::Removed / develop suggests]
+ - Dist::Zilla::PluginBundle::KENTNL 0.01017119
+
+ [Dependencies::Removed / runtime requires]
+ - MooseX::Getopt::GLD
 
  [Internal Notes]
  - previously used "with qw( ::GLD ::Dashes )" in main package, as if
@@ -61,6 +112,9 @@
 0.01000103 2010-12-20T19:02:48Z
  - Depend on Term::ANSIColour 3.00. A Few silly people don't have that.
  - Add a doclink to the image
+
+ [Dependencies::Changed / runtime requires]
+ - Term::ANSIColor 0 → 3.00
 
 0.01000020 2010-12-20T12:42:25Z
  - First version.
