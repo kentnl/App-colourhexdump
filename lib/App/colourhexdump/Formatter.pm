@@ -7,7 +7,7 @@ BEGIN {
   $App::colourhexdump::Formatter::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $App::colourhexdump::Formatter::VERSION = '0.01011317';
+  $App::colourhexdump::Formatter::VERSION = '0.01011318';
 }
 
 # ABSTRACT: Colour-Highlight lines of data as hex.
@@ -190,7 +190,7 @@ App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
 
 =head1 VERSION
 
-version 0.01011317
+version 0.01011318
 
 =head1 METHODS
 

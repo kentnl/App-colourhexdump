@@ -1,5 +1,24 @@
 ﻿Revision history for App-colourhexdump
 
+0.01011318 2013-05-21T16:46:25Z
+ [Dependencies::Added / develop requires]
+ - Test::CPAN::Changes 0.19
+
+ [Dependencies::Changed / build requires]
+ - Module::Build 0.4004 → 0.4005
+
+ [Dependencies::Changed / configure requires]
+ - Module::Build 0.4004 → 0.4005
+
+ [Dependencies::Changed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL v1.7.2 → v1.7.3
+
+ [Documentation]
+ - use Github pages for image instead of github raw access, to be nicer to
+   githubs load.
+ - https://github.com/blog/1482-
+ - https://help.github.com/articles/using-submodules-with-pages
+
 0.01011317 2013-04-09T21:37:30Z
  - Maintenance Release for Module::Build 0.4004
 

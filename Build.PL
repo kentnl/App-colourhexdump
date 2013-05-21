@@ -7,17 +7,17 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   "build_requires" => {
-    "Module::Build" => "0.4004"
+    "Module::Build" => "0.4005"
   },
   "configure_requires" => {
-    "Module::Build" => "0.4004"
+    "Module::Build" => "0.4005"
   },
   "dist_abstract" => "HexDump, but with character-class highlighting.",
   "dist_author" => [
     "Kent Fredric <kentnl\@cpan.org>"
   ],
   "dist_name" => "App-colourhexdump",
-  "dist_version" => "0.01011317",
+  "dist_version" => "0.01011318",
   "license" => "perl",
   "module_name" => "App::colourhexdump",
   "recommends" => {},

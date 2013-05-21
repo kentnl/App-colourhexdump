@@ -6,7 +6,7 @@ BEGIN {
   $App::colourhexdump::ColourProfile::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $App::colourhexdump::ColourProfile::VERSION = '0.01011317';
+  $App::colourhexdump::ColourProfile::VERSION = '0.01011318';
 }
 
 # ABSTRACT: A Role for Colour Profiles
@@ -61,7 +61,7 @@ App::colourhexdump::ColourProfile - A Role for Colour Profiles
 
 =head1 VERSION
 
-version 0.01011317
+version 0.01011318
 
 =head1 SYNOPSIS
 
