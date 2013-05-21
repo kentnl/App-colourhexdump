@@ -61,7 +61,7 @@ x_BuiltWith:
     Module::Build: 0.4005
     Moose: 2.0802
     Moose::Role: 2.0802
-    MooseX::Getopt::Dashes: 'NA(possibly not installed)'
+    MooseX::Getopt::Dashes: 0.56
     Pod::Coverage::TrustPod: 0.100002
     String::RewritePrefix: 0.006
     Term::ANSIColor: 4.02
