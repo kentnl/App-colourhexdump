@@ -6,7 +6,7 @@ BEGIN {
   $App::colourhexdump::DefaultColourProfile::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $App::colourhexdump::DefaultColourProfile::VERSION = '0.01011317';
+  $App::colourhexdump::DefaultColourProfile::VERSION = '0.01011318';
 }
 
 # ABSTRACT: The default colour profile
@@ -57,7 +57,7 @@ App::colourhexdump::DefaultColourProfile - The default colour profile
 
 =head1 VERSION
 
-version 0.01011317
+version 0.01011318
 
 =head1 SYNOPSIS
 
