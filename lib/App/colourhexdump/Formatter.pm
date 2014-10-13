@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package App::colourhexdump::Formatter;
-$App::colourhexdump::Formatter::VERSION = '0.010113';
+$App::colourhexdump::Formatter::VERSION = '0.01011319';
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
 use Moose;
@@ -217,7 +217,7 @@ App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
 
 =head1 VERSION
 
-version 0.010113
+version 0.01011319
 
 =head1 METHODS
 

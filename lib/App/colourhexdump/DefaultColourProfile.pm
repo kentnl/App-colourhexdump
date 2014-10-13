@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package App::colourhexdump::DefaultColourProfile;
-$App::colourhexdump::DefaultColourProfile::VERSION = '0.010113';
+$App::colourhexdump::DefaultColourProfile::VERSION = '0.01011319';
 # ABSTRACT: The default colour profile
 
 use Moose;
@@ -82,7 +82,7 @@ App::colourhexdump::DefaultColourProfile - The default colour profile
 
 =head1 VERSION
 
-version 0.010113
+version 0.01011319
 
 =head1 SYNOPSIS
 

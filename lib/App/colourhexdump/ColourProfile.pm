@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package App::colourhexdump::ColourProfile;
-$App::colourhexdump::ColourProfile::VERSION = '0.010113';
+$App::colourhexdump::ColourProfile::VERSION = '0.01011319';
 # ABSTRACT: A Role for Colour Profiles
 
 use Moose::Role;
@@ -112,7 +112,7 @@ App::colourhexdump::ColourProfile - A Role for Colour Profiles
 
 =head1 VERSION
 
-version 0.010113
+version 0.01011319
 
 =head1 SYNOPSIS
 

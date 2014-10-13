@@ -18,7 +18,7 @@ my %module_build_args = (
     "Kent Fredric <kentnl\@cpan.org>"
   ],
   "dist_name" => "App-colourhexdump",
-  "dist_version" => "0.010113",
+  "dist_version" => "0.01011319",
   "license" => "perl",
   "module_name" => "App::colourhexdump",
   "recommends" => {},

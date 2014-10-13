@@ -116,19 +116,19 @@
    "provides" : {
       "App::colourhexdump" : {
          "file" : "lib/App/colourhexdump.pm",
-         "version" : "0.010113"
+         "version" : "0.01011319"
       },
       "App::colourhexdump::ColourProfile" : {
          "file" : "lib/App/colourhexdump/ColourProfile.pm",
-         "version" : "0.010113"
+         "version" : "0.01011319"
       },
       "App::colourhexdump::DefaultColourProfile" : {
          "file" : "lib/App/colourhexdump/DefaultColourProfile.pm",
-         "version" : "0.010113"
+         "version" : "0.01011319"
       },
       "App::colourhexdump::Formatter" : {
          "file" : "lib/App/colourhexdump/Formatter.pm",
-         "version" : "0.010113"
+         "version" : "0.01011319"
       }
    },
    "release_status" : "stable",
@@ -143,7 +143,7 @@
          "web" : "https://github.com/kentfredric/App-colourhexdump"
       }
    },
-   "version" : "0.010113",
+   "version" : "0.01011319",
    "x_BuiltWith" : {
       "modules" : {
          "CPAN::Meta" : "2.142690",
@@ -255,7 +255,7 @@
                   "repo_root" : "."
                },
                "Dist::Zilla::Role::Version::Sanitize" : {
-                  "mantissa" : 6,
+                  "mantissa" : "8",
                   "normal_form" : "numify"
                }
             },
@@ -694,7 +694,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "0.010113-source",
+                  "tag" : "0.01011319-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -760,7 +760,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : "releases",
                   "signed" : 0,
-                  "tag" : "0.010113",
+                  "tag" : "0.01011319",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

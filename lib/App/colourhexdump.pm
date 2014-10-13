@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package App::colourhexdump;
-$App::colourhexdump::VERSION = '0.010113';
+$App::colourhexdump::VERSION = '0.01011319';
 # ABSTRACT: HexDump, but with character-class highlighting.
 
 use Moose;
@@ -198,7 +198,7 @@ App::colourhexdump - HexDump, but with character-class highlighting.
 
 =head1 VERSION
 
-version 0.010113
+version 0.01011319
 
 =head1 SYNOPSIS
 

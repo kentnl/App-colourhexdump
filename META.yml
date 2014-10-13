@@ -19,16 +19,16 @@ name: App-colourhexdump
 provides:
   App::colourhexdump:
     file: lib/App/colourhexdump.pm
-    version: '0.010113'
+    version: '0.01011319'
   App::colourhexdump::ColourProfile:
     file: lib/App/colourhexdump/ColourProfile.pm
-    version: '0.010113'
+    version: '0.01011319'
   App::colourhexdump::DefaultColourProfile:
     file: lib/App/colourhexdump/DefaultColourProfile.pm
-    version: '0.010113'
+    version: '0.01011319'
   App::colourhexdump::Formatter:
     file: lib/App/colourhexdump/Formatter.pm
-    version: '0.010113'
+    version: '0.01011319'
 requires:
   Carp: '0'
   Class::Load: '0.06'
@@ -47,7 +47,7 @@ resources:
   bugtracker: https://github.com/kentfredric/App-colourhexdump/issues
   homepage: https://github.com/kentfredric/App-colourhexdump
   repository: https://github.com/kentfredric/App-colourhexdump.git
-version: '0.010113'
+version: '0.01011319'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142690'
@@ -151,7 +151,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
         Dist::Zilla::Role::Version::Sanitize:
-          mantissa: '6'
+          mantissa: '8'
           normal_form: numify
       name: '@Author::KENTNL/Git::NextVersion::Sanitized'
       version: '0.002002'
@@ -488,7 +488,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 0.010113-source
+          tag: 0.01011319-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -538,7 +538,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '0.010113'
+          tag: '0.01011319'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
