@@ -5,6 +5,8 @@ package App::colourhexdump::DefaultColourProfile;
 
 # ABSTRACT: The default colour profile
 
+# AUTHORITY
+
 use Moose;
 use namespace::autoclean;
 

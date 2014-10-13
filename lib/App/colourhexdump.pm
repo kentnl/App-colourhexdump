@@ -5,6 +5,8 @@ package App::colourhexdump;
 
 # ABSTRACT: HexDump, but with character-class highlighting.
 
+# AUTHORITY
+
 use Moose;
 use MooseX::Getopt::Dashes 0.37;
 with qw( MooseX::Getopt::Dashes );
@@ -126,7 +128,6 @@ sub BUILD {
 B<INTERNAL>
 
 =cut
-
 
 sub get_filehandle {
   my ( $self, $filename ) = @_;

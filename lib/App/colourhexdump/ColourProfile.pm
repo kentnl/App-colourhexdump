@@ -5,6 +5,8 @@ package App::colourhexdump::ColourProfile;
 
 # ABSTRACT: A Role for Colour Profiles
 
+# AUTHORITY
+
 use Moose::Role;
 use namespace::autoclean;
 

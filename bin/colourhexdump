@@ -8,11 +8,10 @@ package    #  hide me
 
 # ABSTRACT: Command line stub for L<App::colourhexdump>
 # PODNAME: colourhexdump
-#
+
+# AUTHORITY
 use App::colourhexdump;
 
 App::colourhexdump->new_with_options()->run();
-
-
 
 1;

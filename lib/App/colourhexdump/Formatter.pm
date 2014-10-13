@@ -6,6 +6,8 @@ package App::colourhexdump::Formatter;
 
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
+# AUTHORITY
+
 use Moose;
 use String::RewritePrefix;
 use Class::Load 0.06 qw( load_class );
