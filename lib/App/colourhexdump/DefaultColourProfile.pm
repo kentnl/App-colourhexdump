@@ -66,7 +66,7 @@ sub get_colour_for {
 
 sub get_display_symbol_for {
   my ( $self, $char ) = ( $_[0], $_[1] );
-  return q{_} if $char =~ qr{[\n\r\t ]};
+  return q{_} if $char =~ qr{\s};
   return q{.} if $char =~ qr{[^[:print:]]};
   return $char;
 }
