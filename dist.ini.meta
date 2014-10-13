@@ -11,7 +11,8 @@ copyright_holder = Kent Fredric <kentnl@cpan.org>
 [@Author::KENTNL]
 :version     = 2.021
 bumpversions = 1
-mantissa     = 8
+normal_form  = numify
+mantissa     = 6
 copyfiles    = LICENSE
 srcreadme    = mkdn
 
