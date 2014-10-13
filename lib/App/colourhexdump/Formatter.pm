@@ -1,20 +1,18 @@
-
+use 5.006;    # our
 use strict;
 use warnings;
 
 package App::colourhexdump::Formatter;
-BEGIN {
-  $App::colourhexdump::Formatter::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $App::colourhexdump::Formatter::VERSION = '0.01011318';
-}
+
+our $VERSION = '1.000000';
 
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
-use Moose;
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+use Moose qw( has );
 use String::RewritePrefix;
-use Class::Load 0.06 qw( load_class );
+use Module::Runtime qw( require_module );
 use Term::ANSIColor 3.00 qw( colorstrip );
 use List::MoreUtils qw( natatime );
 
@@ -87,6 +85,14 @@ sub _build_hex_row_length {
 }
 
 
+
+
+
+
+
+
+
+
 ## no critic ( Subroutines::RequireArgUnpacking )
 
 sub format_foreach_in_fh {
@@ -100,6 +106,11 @@ sub format_foreach_in_fh {
 }
 
 
+
+
+
+
+
 ## no critic ( Subroutines::RequireArgUnpacking )
 
 sub format_row_from_fh {
@@ -109,6 +120,11 @@ sub format_row_from_fh {
   $offset += $self->row_length;
   return $str, $offset;
 }
+
+
+
+
+
 
 
 sub format_row {
@@ -121,6 +137,11 @@ sub format_row {
 
   return sprintf $format, $offset_hex, $self->pad_hex_row( $self->hex_encode(@chars) ), $self->pretty_encode(@chars);
 }
+
+
+
+
+
 
 
 sub hex_encode {
@@ -140,6 +161,11 @@ sub hex_encode {
 }
 
 
+
+
+
+
+
 sub pretty_encode {
   my ( $self, @chars ) = @_;
   my $output;
@@ -156,6 +182,11 @@ sub _to_hex {
 }
 
 
+
+
+
+
+
 sub pad_hex_row {
   my ( $self, $row ) = @_;
   my $length = length colorstrip($row);
@@ -167,7 +198,7 @@ sub pad_hex_row {
 
 sub _build_colour_profile {
   my $self = shift;
-  load_class( $self->real_colour_profile_class );
+  require_module( $self->real_colour_profile_class );
   return $self->real_colour_profile_class->new();
 }
 
@@ -184,13 +215,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
 
 =head1 VERSION
 
-version 0.01011318
+version 1.000000
 
 =head1 METHODS
 
@@ -201,7 +234,7 @@ version 0.01011318
         print $formatted;
     });
 
-=head2 format_row_from_fh {
+=head2 format_row_from_fh
 
     my ( $formatted , $offset ) = $formatter->format_row_from_fh( $fh, $offset );
 
@@ -227,7 +260,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

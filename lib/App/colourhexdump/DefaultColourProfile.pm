@@ -1,46 +1,73 @@
+use 5.006;
 use strict;
 use warnings;
 
 package App::colourhexdump::DefaultColourProfile;
-BEGIN {
-  $App::colourhexdump::DefaultColourProfile::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $App::colourhexdump::DefaultColourProfile::VERSION = '0.01011318';
-}
+
+our $VERSION = '1.000000';
 
 # ABSTRACT: The default colour profile
 
-use Moose;
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+use Moose qw( has with );
 use namespace::autoclean;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 with 'App::colourhexdump::ColourProfile';
 
-use Term::ANSIColor 3.00 qw(:constants);
+use Term::ANSIColor 3.00 qw( BLACK ON_RED BOLD BRIGHT_BLUE BRIGHT_YELLOW ON_YELLOW RED BLUE YELLOW );
+
+
+
+
+
 
 
 ## no critic ( Subroutines::RequireArgUnpacking )
 sub get_colour_for {
-  my ( $self, $char ) = ( $_[0], $_[1] );
-
-  return BLACK . ON_RED                 if $char =~ /\r/;
-  return BOLD . BRIGHT_BLUE             if $char =~ /\n/;
-  return BLUE                           if $char =~ / /;
-  return BOLD . BRIGHT_BLUE . ON_YELLOW if $char =~ /\t/;
-  return RED                            if $char =~ qr{[^[:print:]]};
-  return                                if $char =~ qr{[a-zA-Z0-9]};
+  return BLACK . ON_RED                 if $_[1] =~ /\r/;
+  return BOLD . BRIGHT_BLUE             if $_[1] =~ /\n/;
+  return BLUE                           if $_[1] =~ / /;
+  return BOLD . BRIGHT_BLUE . ON_YELLOW if $_[1] =~ /\t/;
+  return RED                            if $_[1] =~ qr{[^[:print:]]};
+  return                                if $_[1] =~ qr{[[:alpha:]\d]};
   return YELLOW;
 }
+
+
+
+
+
 
 
 ## no critic ( Subroutines::RequireArgUnpacking )
 
 sub get_display_symbol_for {
-  my ( $self, $char ) = ( $_[0], $_[1] );
-  return q{_} if $char =~ qr{[\n\r\t ]};
-  return q{.} if $char =~ qr{[^[:print:]]};
-  return $char;
+  return q{_} if $_[1] =~ qr{\s};
+  return q{.} if $_[1] =~ qr{[^[:print:]]};
+  return $_[1];
 }
 
 __PACKAGE__->meta->make_immutable;
@@ -51,13 +78,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 App::colourhexdump::DefaultColourProfile - The default colour profile
 
 =head1 VERSION
 
-version 0.01011318
+version 1.000000
 
 =head1 SYNOPSIS
 
@@ -95,7 +124,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

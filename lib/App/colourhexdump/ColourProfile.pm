@@ -1,27 +1,77 @@
+use 5.006;    # our
 use strict;
 use warnings;
 
 package App::colourhexdump::ColourProfile;
-BEGIN {
-  $App::colourhexdump::ColourProfile::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $App::colourhexdump::ColourProfile::VERSION = '0.01011318';
-}
+
+our $VERSION = '1.000000';
 
 # ABSTRACT: A Role for Colour Profiles
 
-use Moose::Role;
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+use Moose::Role qw( requires );
 use namespace::autoclean;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 requires 'get_colour_for';
 
 
+
+
+
+
+
+
+
 requires 'get_display_symbol_for';
 
-use Term::ANSIColor 3.00 qw(:constants);
+use Term::ANSIColor 3.00 qw( RESET );
+
+
+
+
+
+
+
 
 
 ## no critic ( RequireArgUnpacking )
@@ -34,6 +84,12 @@ sub get_string_pre {
   }
   return q{};
 }
+
+
+
+
+
+
 
 
 ## no critic ( RequireArgUnpacking )
@@ -55,13 +111,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 App::colourhexdump::ColourProfile - A Role for Colour Profiles
 
 =head1 VERSION
 
-version 0.01011318
+version 1.000000
 
 =head1 SYNOPSIS
 
@@ -93,7 +151,7 @@ Return any string of data that should be prepended every time a given character 
 
 Generally, you only want to print ANSI Escape codes.
 
-Don't worry about resetting things, we put a ^[[0m in for you.
+Don't worry about resetting things, we put a C<^[[0m> in for you.
 
 Return C<undef> if you do not wish to apply colouring.
 
@@ -107,11 +165,11 @@ Returns a user viewable alternative to the matched string.
 
 =head2 get_string_pre
 
-Wraps L<get_colour_for> and returns either a string sequence or ''.
+Wraps L</get_colour_for> and returns either a string sequence or ''.
 
 =head2 get_string_post
 
-Wraps L<get_colour_for> and returns either an ANSI Reset Code, or '', depending
+Wraps L</get_colour_for> and returns either an ANSI Reset Code, or '', depending
 on what was returned.
 
 =head1 AUTHOR
@@ -120,7 +178,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
