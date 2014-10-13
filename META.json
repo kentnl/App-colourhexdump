@@ -134,13 +134,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/App-colourhexdump/issues"
+         "web" : "https://github.com/kentnl/App-colourhexdump/issues"
       },
-      "homepage" : "https://github.com/kentfredric/App-colourhexdump",
+      "homepage" : "https://github.com/kentnl/App-colourhexdump",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/App-colourhexdump.git",
-         "web" : "https://github.com/kentfredric/App-colourhexdump"
+         "url" : "https://github.com/kentnl/App-colourhexdump.git",
+         "web" : "https://github.com/kentnl/App-colourhexdump"
       }
    },
    "version" : "1.000000",

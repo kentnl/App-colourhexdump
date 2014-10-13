@@ -43,9 +43,9 @@ requires:
   strict: '0'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/kentfredric/App-colourhexdump/issues
-  homepage: https://github.com/kentfredric/App-colourhexdump
-  repository: https://github.com/kentfredric/App-colourhexdump.git
+  bugtracker: https://github.com/kentnl/App-colourhexdump/issues
+  homepage: https://github.com/kentnl/App-colourhexdump
+  repository: https://github.com/kentnl/App-colourhexdump.git
 version: '1.000000'
 x_BuiltWith:
   modules:
