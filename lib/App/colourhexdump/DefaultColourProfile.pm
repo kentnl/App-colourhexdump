@@ -47,14 +47,12 @@ See L<App::colourhexdump::ColourProfile/get_colour_for>
 
 ## no critic ( Subroutines::RequireArgUnpacking )
 sub get_colour_for {
-  my ( $self, $char ) = ( $_[0], $_[1] );
-
-  return BLACK . ON_RED                 if $char =~ /\r/;
-  return BOLD . BRIGHT_BLUE             if $char =~ /\n/;
-  return BLUE                           if $char =~ / /;
-  return BOLD . BRIGHT_BLUE . ON_YELLOW if $char =~ /\t/;
-  return RED                            if $char =~ qr{[^[:print:]]};
-  return                                if $char =~ qr{[a-zA-Z0-9]};
+  return BLACK . ON_RED                 if $_[1] =~ /\r/;
+  return BOLD . BRIGHT_BLUE             if $_[1] =~ /\n/;
+  return BLUE                           if $_[1] =~ / /;
+  return BOLD . BRIGHT_BLUE . ON_YELLOW if $_[1] =~ /\t/;
+  return RED                            if $_[1] =~ qr{[^[:print:]]};
+  return                                if $_[1] =~ qr{[a-zA-Z0-9]};
   return YELLOW;
 }
 
