@@ -1,3 +1,4 @@
+use 5.006;    # our
 use strict;
 use warnings;
 
@@ -9,7 +10,7 @@ our $VERSION = '1.000000';
 
 # AUTHORITY
 
-use Moose::Role;
+use Moose::Role qw( requires );
 use namespace::autoclean;
 
 =head1 SYNOPSIS
@@ -63,7 +64,7 @@ Returns a user viewable alternative to the matched string.
 
 requires 'get_display_symbol_for';
 
-use Term::ANSIColor 3.00 qw(:constants);
+use Term::ANSIColor 3.00 qw( RESET );
 
 =head1 PROVIDED
 

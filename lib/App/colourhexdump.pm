@@ -1,3 +1,4 @@
+use 5.006;    # our
 use strict;
 use warnings;
 
@@ -9,7 +10,7 @@ our $VERSION = '1.000000';
 
 # AUTHORITY
 
-use Moose;
+use Moose qw( has with );
 use MooseX::Getopt::Dashes 0.37;
 with qw( MooseX::Getopt::Dashes );
 

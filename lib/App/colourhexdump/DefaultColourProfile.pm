@@ -1,3 +1,4 @@
+use 5.006;
 use strict;
 use warnings;
 
@@ -9,7 +10,7 @@ our $VERSION = '1.000000';
 
 # AUTHORITY
 
-use Moose;
+use Moose qw( has with );
 use namespace::autoclean;
 
 =head1 SYNOPSIS
@@ -36,7 +37,7 @@ Invocation:
 
 with 'App::colourhexdump::ColourProfile';
 
-use Term::ANSIColor 3.00 qw(:constants);
+use Term::ANSIColor 3.00 qw( BLACK ON_RED BOLD BRIGHT_BLUE BRIGHT_YELLOW ON_YELLOW RED BLUE YELLOW );
 
 =method get_colour_for
 
