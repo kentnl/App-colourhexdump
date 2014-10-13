@@ -65,9 +65,8 @@ sub get_colour_for {
 ## no critic ( Subroutines::RequireArgUnpacking )
 
 sub get_display_symbol_for {
-  my ( $self, $char ) = ( $_[0], $_[1] );
-  return q{_} if $char =~ qr{\s};
-  return q{.} if $char =~ qr{[^[:print:]]};
+  return q{_} if $_[1] =~ qr{\s};
+  return q{.} if $_[1] =~ qr{[^[:print:]]};
   return $char;
 }
 
