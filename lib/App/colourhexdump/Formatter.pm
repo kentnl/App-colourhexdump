@@ -105,7 +105,7 @@ sub format_foreach_in_fh {
   return 1;
 }
 
-=method format_row_from_fh {
+=method format_row_from_fh
 
     my ( $formatted , $offset ) = $formatter->format_row_from_fh( $fh, $offset );
 

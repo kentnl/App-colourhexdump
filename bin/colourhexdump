@@ -8,7 +8,7 @@ package    #  hide me
 
 our $VERSION = '1.000000';
 
-# ABSTRACT: Command line stub for L<App::colourhexdump>
+# ABSTRACT: Command line stub for App::colourhexdump
 # PODNAME: colourhexdump
 
 # AUTHORITY
