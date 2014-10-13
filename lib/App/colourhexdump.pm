@@ -3,6 +3,8 @@ use warnings;
 
 package App::colourhexdump;
 
+our $VERSION = '1.000000';
+
 # ABSTRACT: HexDump, but with character-class highlighting.
 
 # AUTHORITY

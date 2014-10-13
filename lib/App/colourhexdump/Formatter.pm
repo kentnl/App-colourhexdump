@@ -4,6 +4,8 @@ use warnings;
 
 package App::colourhexdump::Formatter;
 
+our $VERSION = '1.000000';
+
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
 # AUTHORITY

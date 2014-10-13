@@ -3,6 +3,8 @@ use warnings;
 
 package App::colourhexdump::DefaultColourProfile;
 
+our $VERSION = '1.000000';
+
 # ABSTRACT: The default colour profile
 
 # AUTHORITY

@@ -3,6 +3,8 @@ use warnings;
 
 package App::colourhexdump::ColourProfile;
 
+our $VERSION = '1.000000';
+
 # ABSTRACT: A Role for Colour Profiles
 
 # AUTHORITY
