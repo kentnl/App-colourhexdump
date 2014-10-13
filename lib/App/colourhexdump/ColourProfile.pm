@@ -1,3 +1,4 @@
+use 5.006; # our
 use strict;
 use warnings;
 
@@ -9,7 +10,7 @@ our $VERSION = '1.000000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose::Role;
+use Moose::Role qw( requires );
 use namespace::autoclean;
 
 

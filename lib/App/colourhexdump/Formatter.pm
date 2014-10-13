@@ -1,4 +1,4 @@
-
+use 5.006; # our
 use strict;
 use warnings;
 
@@ -10,7 +10,7 @@ our $VERSION = '1.000000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose;
+use Moose qw( has );
 use String::RewritePrefix;
 use Class::Load 0.06 qw( load_class );
 use Term::ANSIColor 3.00 qw( colorstrip );
