@@ -1,6 +1,6 @@
 ﻿Revision history for App-colourhexdump
 
-0.01011319 2014-10-13T22:25:51Z e7c28a3
+0.01011319 2014-10-13T22:29:08Z e7dd990
  [Dependencies::Stats]
  - Dependencies changed since 0.01011318, see misc/*.deps* for details
  - build: ↑1
