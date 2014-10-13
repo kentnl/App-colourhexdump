@@ -9,7 +9,7 @@ our $VERSION = '1.000000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose;
+use Moose qw( has with );
 use namespace::autoclean;
 
 
@@ -36,7 +36,7 @@ use namespace::autoclean;
 
 with 'App::colourhexdump::ColourProfile';
 
-use Term::ANSIColor 3.00 qw(:constants);
+use Term::ANSIColor 3.00 qw( BLACK ON_RED BOLD BRIGHT_BLUE BRIGHT_YELLOW ON_YELLOW RED );
 
 
 

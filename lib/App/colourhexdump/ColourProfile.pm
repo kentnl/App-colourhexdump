@@ -64,7 +64,7 @@ requires 'get_colour_for';
 
 requires 'get_display_symbol_for';
 
-use Term::ANSIColor 3.00 qw(:constants);
+use Term::ANSIColor 3.00 qw( RESET );
 
 
 
