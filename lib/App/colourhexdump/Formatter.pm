@@ -213,6 +213,8 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.

@@ -78,6 +78,8 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 App::colourhexdump::DefaultColourProfile - The default colour profile

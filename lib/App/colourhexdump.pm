@@ -193,6 +193,8 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 App::colourhexdump - HexDump, but with character-class highlighting.
