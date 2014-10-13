@@ -18,10 +18,12 @@ lib/App/colourhexdump.pm
 lib/App/colourhexdump/ColourProfile.pm
 lib/App/colourhexdump/DefaultColourProfile.pm
 lib/App/colourhexdump/Formatter.pm
+maint/perlcritic.rc.gen.pl
 misc/Changes.deps
 misc/Changes.deps.all
 misc/Changes.deps.dev
 misc/Changes.deps.opt
+misc/perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_App_colourhexdump_ColourProfile_pm.t
 t/00-compile/lib_App_colourhexdump_DefaultColourProfile_pm.t

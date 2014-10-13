@@ -12,7 +12,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose qw( has );
 use String::RewritePrefix;
-use Class::Load 0.06 qw( load_class );
+use Module::Runtime qw( require_module );
 use Term::ANSIColor 3.00 qw( colorstrip );
 use List::MoreUtils qw( natatime );
 
@@ -198,7 +198,7 @@ sub pad_hex_row {
 
 sub _build_colour_profile {
   my $self = shift;
-  load_class( $self->real_colour_profile_class );
+  require_module( $self->real_colour_profile_class );
   return $self->real_colour_profile_class->new();
 }
 
