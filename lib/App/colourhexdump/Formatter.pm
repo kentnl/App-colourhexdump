@@ -3,7 +3,9 @@ use strict;
 use warnings;
 
 package App::colourhexdump::Formatter;
-$App::colourhexdump::Formatter::VERSION = '0.01011319';
+
+our $VERSION = '1.00000000';
+
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -221,7 +223,7 @@ App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
 
 =head1 VERSION
 
-version 0.01011319
+version 1.00000000
 
 =head1 METHODS
 

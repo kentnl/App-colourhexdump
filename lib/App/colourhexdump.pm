@@ -2,7 +2,9 @@ use strict;
 use warnings;
 
 package App::colourhexdump;
-$App::colourhexdump::VERSION = '0.01011319';
+
+our $VERSION = '1.00000000';
+
 # ABSTRACT: HexDump, but with character-class highlighting.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -201,7 +203,7 @@ App::colourhexdump - HexDump, but with character-class highlighting.
 
 =head1 VERSION
 
-version 0.01011319
+version 1.00000000
 
 =head1 SYNOPSIS
 

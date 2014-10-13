@@ -2,7 +2,7 @@ NAME
     App::colourhexdump - HexDump, but with character-class highlighting.
 
 VERSION
-    version 0.01011319
+    version 1.00000000
 
 SYNOPSIS
         usage: colourhexdump [-?Ccfrx] [long options...]

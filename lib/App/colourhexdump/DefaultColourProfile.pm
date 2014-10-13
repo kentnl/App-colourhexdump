@@ -2,7 +2,9 @@ use strict;
 use warnings;
 
 package App::colourhexdump::DefaultColourProfile;
-$App::colourhexdump::DefaultColourProfile::VERSION = '0.01011319';
+
+our $VERSION = '1.00000000';
+
 # ABSTRACT: The default colour profile
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -86,7 +88,7 @@ App::colourhexdump::DefaultColourProfile - The default colour profile
 
 =head1 VERSION
 
-version 0.01011319
+version 1.00000000
 
 =head1 SYNOPSIS
 

@@ -10,7 +10,7 @@ copyright_holder = Kent Fredric <kentnl@cpan.org>
 
 [@Author::KENTNL]
 :version     = 2.021
-git_versions = 1
+bumpversions = 1
 mantissa     = 8
 copyfiles    = LICENSE
 srcreadme    = mkdn

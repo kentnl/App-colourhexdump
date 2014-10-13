@@ -2,7 +2,9 @@ use strict;
 use warnings;
 
 package App::colourhexdump::ColourProfile;
-$App::colourhexdump::ColourProfile::VERSION = '0.01011319';
+
+our $VERSION = '1.00000000';
+
 # ABSTRACT: A Role for Colour Profiles
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -116,7 +118,7 @@ App::colourhexdump::ColourProfile - A Role for Colour Profiles
 
 =head1 VERSION
 
-version 0.01011319
+version 1.00000000
 
 =head1 SYNOPSIS
 
