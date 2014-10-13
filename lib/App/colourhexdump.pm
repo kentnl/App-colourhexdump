@@ -133,7 +133,7 @@ sub BUILD {
 
 
 sub get_filehandle {
-  my ( $self, $filename ) = @_;
+  my ( undef, $filename ) = @_;
   if ( $filename eq q[-] ) {
     return \*STDIN;
   }
