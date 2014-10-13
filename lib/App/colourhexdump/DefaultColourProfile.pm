@@ -67,7 +67,7 @@ See L<App::colourhexdump::ColourProfile/get_display_symbol_for>
 sub get_display_symbol_for {
   return q{_} if $_[1] =~ qr{\s};
   return q{.} if $_[1] =~ qr{[^[:print:]]};
-  return $char;
+  return $_[1];
 }
 
 __PACKAGE__->meta->make_immutable;
