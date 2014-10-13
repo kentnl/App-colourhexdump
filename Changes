@@ -1,6 +1,6 @@
 ﻿Revision history for App-colourhexdump
 
-1.00000000 2014-10-13T22:58:11Z 22a7d9f
+1.000000 2014-10-13T22:58:11Z 22a7d9f
  [00 Major - Version Scheme Change]
  - Migrating from x.yyyzzzab to x.yyyzzz
  - This may affect hand-operated downstreams.
