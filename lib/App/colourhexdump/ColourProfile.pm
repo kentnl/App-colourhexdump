@@ -151,7 +151,7 @@ Return any string of data that should be prepended every time a given character 
 
 Generally, you only want to print ANSI Escape codes.
 
-Don't worry about resetting things, we put a ^[[0m in for you.
+Don't worry about resetting things, we put a C<^[[0m> in for you.
 
 Return C<undef> if you do not wish to apply colouring.
 
@@ -165,11 +165,11 @@ Returns a user viewable alternative to the matched string.
 
 =head2 get_string_pre
 
-Wraps L<get_colour_for> and returns either a string sequence or ''.
+Wraps L</get_colour_for> and returns either a string sequence or ''.
 
 =head2 get_string_post
 
-Wraps L<get_colour_for> and returns either an ANSI Reset Code, or '', depending
+Wraps L</get_colour_for> and returns either an ANSI Reset Code, or '', depending
 on what was returned.
 
 =head1 AUTHOR
