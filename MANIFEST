@@ -13,6 +13,7 @@ README
 bin/colorhexdump
 bin/colourhexdump
 dist.ini
+dist.ini.meta
 lib/App/colourhexdump.pm
 lib/App/colourhexdump/ColourProfile.pm
 lib/App/colourhexdump/DefaultColourProfile.pm
