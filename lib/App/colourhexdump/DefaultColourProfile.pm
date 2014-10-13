@@ -36,7 +36,7 @@ use namespace::autoclean;
 
 with 'App::colourhexdump::ColourProfile';
 
-use Term::ANSIColor 3.00 qw( BLACK ON_RED BOLD BRIGHT_BLUE BRIGHT_YELLOW ON_YELLOW RED );
+use Term::ANSIColor 3.00 qw( BLACK ON_RED BOLD BRIGHT_BLUE BRIGHT_YELLOW ON_YELLOW RED BLUE YELLOW );
 
 
 
