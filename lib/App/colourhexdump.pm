@@ -134,7 +134,7 @@ B<INTERNAL>
 
 sub get_filehandle {
   my ( undef, $filename ) = @_;
-  if ( $filename eq q[-] ) {
+  if ( q[-] eq $filename ) {
     return \*STDIN;
   }
   require Carp;
@@ -182,7 +182,7 @@ sub run {
       $self->get_filehandle($_),
       sub {
         print $prefix . shift;
-      }
+      },
     );
   }
   return 1;
