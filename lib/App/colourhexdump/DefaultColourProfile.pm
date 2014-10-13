@@ -52,7 +52,7 @@ sub get_colour_for {
   return BLUE                           if $_[1] =~ / /;
   return BOLD . BRIGHT_BLUE . ON_YELLOW if $_[1] =~ /\t/;
   return RED                            if $_[1] =~ qr{[^[:print:]]};
-  return                                if $_[1] =~ qr{[a-zA-Z0-9]};
+  return                                if $_[1] =~ qr{[[:alpha:]0-9]};
   return YELLOW;
 }
 
