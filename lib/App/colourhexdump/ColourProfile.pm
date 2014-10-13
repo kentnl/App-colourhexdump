@@ -5,6 +5,8 @@ package App::colourhexdump::ColourProfile;
 $App::colourhexdump::ColourProfile::VERSION = '0.01011319';
 # ABSTRACT: A Role for Colour Profiles
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose::Role;
 use namespace::autoclean;
 

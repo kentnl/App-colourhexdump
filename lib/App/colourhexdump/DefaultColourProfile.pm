@@ -5,6 +5,8 @@ package App::colourhexdump::DefaultColourProfile;
 $App::colourhexdump::DefaultColourProfile::VERSION = '0.01011319';
 # ABSTRACT: The default colour profile
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose;
 use namespace::autoclean;
 

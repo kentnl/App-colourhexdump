@@ -5,6 +5,8 @@ package App::colourhexdump;
 $App::colourhexdump::VERSION = '0.01011319';
 # ABSTRACT: HexDump, but with character-class highlighting.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose;
 use MooseX::Getopt::Dashes 0.37;
 with qw( MooseX::Getopt::Dashes );
@@ -118,7 +120,6 @@ sub BUILD {
   return $self;
 
 }
-
 
 
 

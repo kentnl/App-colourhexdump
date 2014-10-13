@@ -6,6 +6,8 @@ package App::colourhexdump::Formatter;
 $App::colourhexdump::Formatter::VERSION = '0.01011319';
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose;
 use String::RewritePrefix;
 use Class::Load 0.06 qw( load_class );
