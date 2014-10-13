@@ -234,7 +234,7 @@ version 1.000000
         print $formatted;
     });
 
-=head2 format_row_from_fh {
+=head2 format_row_from_fh
 
     my ( $formatted , $offset ) = $formatter->format_row_from_fh( $fh, $offset );
 
