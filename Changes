@@ -1,6 +1,11 @@
 ﻿Revision history for App-colourhexdump
 
 1.00000000 2014-10-13T22:41:51Z 30a9684
+ [00 Major - Version Scheme Change]
+ - Migrating from x.yyyzzzab to x.yyyzzz
+ - This may affect hand-operated downstreams.
+ - https://questhub.io/realm/perl/quest/5388d3a9bbd0be2224000129
+
  [Dependencies::Stats]
  - Dependencies changed since 0.01011318, see misc/*.deps* for details
  - build: ↑1
