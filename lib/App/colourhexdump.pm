@@ -2,13 +2,7 @@ use strict;
 use warnings;
 
 package App::colourhexdump;
-BEGIN {
-  $App::colourhexdump::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $App::colourhexdump::VERSION = '0.01011318';
-}
-
+$App::colourhexdump::VERSION = '0.010113';
 # ABSTRACT: HexDump, but with character-class highlighting.
 
 use Moose;
@@ -19,6 +13,31 @@ use Getopt::Long::Descriptive;
 use Term::ANSIColor 3.00 qw( colorstrip );
 use App::colourhexdump::Formatter;
 use namespace::autoclean;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 has colour_profile => (
@@ -86,12 +105,26 @@ has 'colour' => (
 );
 
 
+
+
+
+
+
+
+
 sub BUILD {
   my $self = shift;
   push @{ $self->_files() }, @{ $self->extra_argv };
   return $self;
 
 }
+
+
+
+
+
+
+
 
 
 
@@ -104,6 +137,13 @@ sub get_filehandle {
   open my $fh, '<', $filename or Carp::confess("Cant open $_ , $!");
   return $fh;
 }
+
+
+
+
+
+
+
 
 
 sub run {
@@ -158,7 +198,7 @@ App::colourhexdump - HexDump, but with character-class highlighting.
 
 =head1 VERSION
 
-version 0.01011318
+version 0.010113
 
 =head1 SYNOPSIS
 
@@ -208,7 +248,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

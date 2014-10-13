@@ -3,13 +3,7 @@ use strict;
 use warnings;
 
 package App::colourhexdump::Formatter;
-BEGIN {
-  $App::colourhexdump::Formatter::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $App::colourhexdump::Formatter::VERSION = '0.01011318';
-}
-
+$App::colourhexdump::Formatter::VERSION = '0.010113';
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
 use Moose;
@@ -87,6 +81,14 @@ sub _build_hex_row_length {
 }
 
 
+
+
+
+
+
+
+
+
 ## no critic ( Subroutines::RequireArgUnpacking )
 
 sub format_foreach_in_fh {
@@ -100,6 +102,11 @@ sub format_foreach_in_fh {
 }
 
 
+
+
+
+
+
 ## no critic ( Subroutines::RequireArgUnpacking )
 
 sub format_row_from_fh {
@@ -109,6 +116,11 @@ sub format_row_from_fh {
   $offset += $self->row_length;
   return $str, $offset;
 }
+
+
+
+
+
 
 
 sub format_row {
@@ -121,6 +133,11 @@ sub format_row {
 
   return sprintf $format, $offset_hex, $self->pad_hex_row( $self->hex_encode(@chars) ), $self->pretty_encode(@chars);
 }
+
+
+
+
+
 
 
 sub hex_encode {
@@ -140,6 +157,11 @@ sub hex_encode {
 }
 
 
+
+
+
+
+
 sub pretty_encode {
   my ( $self, @chars ) = @_;
   my $output;
@@ -154,6 +176,11 @@ sub pretty_encode {
 sub _to_hex {
   return join q{}, map { unpack q{H*}, $_ } @_;
 }
+
+
+
+
+
 
 
 sub pad_hex_row {
@@ -190,7 +217,7 @@ App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
 
 =head1 VERSION
 
-version 0.01011318
+version 0.010113
 
 =head1 METHODS
 
@@ -227,7 +254,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

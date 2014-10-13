@@ -2,13 +2,7 @@ use strict;
 use warnings;
 
 package App::colourhexdump::ColourProfile;
-BEGIN {
-  $App::colourhexdump::ColourProfile::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $App::colourhexdump::ColourProfile::VERSION = '0.01011318';
-}
-
+$App::colourhexdump::ColourProfile::VERSION = '0.010113';
 # ABSTRACT: A Role for Colour Profiles
 
 use Moose::Role;
@@ -16,12 +10,63 @@ use namespace::autoclean;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 requires 'get_colour_for';
+
+
+
+
+
+
+
 
 
 requires 'get_display_symbol_for';
 
 use Term::ANSIColor 3.00 qw(:constants);
+
+
+
+
+
+
+
 
 
 ## no critic ( RequireArgUnpacking )
@@ -34,6 +79,12 @@ sub get_string_pre {
   }
   return q{};
 }
+
+
+
+
+
+
 
 
 ## no critic ( RequireArgUnpacking )
@@ -61,7 +112,7 @@ App::colourhexdump::ColourProfile - A Role for Colour Profiles
 
 =head1 VERSION
 
-version 0.01011318
+version 0.010113
 
 =head1 SYNOPSIS
 
@@ -120,7 +171,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

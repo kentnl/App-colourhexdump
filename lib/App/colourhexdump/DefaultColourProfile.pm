@@ -2,22 +2,42 @@ use strict;
 use warnings;
 
 package App::colourhexdump::DefaultColourProfile;
-BEGIN {
-  $App::colourhexdump::DefaultColourProfile::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $App::colourhexdump::DefaultColourProfile::VERSION = '0.01011318';
-}
-
+$App::colourhexdump::DefaultColourProfile::VERSION = '0.010113';
 # ABSTRACT: The default colour profile
 
 use Moose;
 use namespace::autoclean;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 with 'App::colourhexdump::ColourProfile';
 
 use Term::ANSIColor 3.00 qw(:constants);
+
+
+
+
+
 
 
 ## no critic ( Subroutines::RequireArgUnpacking )
@@ -32,6 +52,11 @@ sub get_colour_for {
   return                                if $char =~ qr{[a-zA-Z0-9]};
   return YELLOW;
 }
+
+
+
+
+
 
 
 ## no critic ( Subroutines::RequireArgUnpacking )
@@ -57,7 +82,7 @@ App::colourhexdump::DefaultColourProfile - The default colour profile
 
 =head1 VERSION
 
-version 0.01011318
+version 0.010113
 
 =head1 SYNOPSIS
 
@@ -95,7 +120,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
