@@ -224,9 +224,9 @@ It can be used like so
 
 If you are using an HTML-enabled POD viewer, you should see a screenshot of this in action:
 
-( Everyone else can visit L<http://kentfredric.github.io/App-colourhexdump/media/Screenshot.png> )
+( Everyone else can visit L<http://kentnl.github.io/App-colourhexdump/media/Screenshot.png> )
 
-=for html <center><img src="http://kentfredric.github.io/App-colourhexdump/media/Screenshot.png" alt="Screenshot with explanation of colours" width="826" height="838"/></center>
+=for html <center><img src="http://kentnl.github.io/App-colourhexdump/media/Screenshot.png" alt="Screenshot with explanation of colours" width="826" height="838"/></center>
 
 =head1 METHODS
 
