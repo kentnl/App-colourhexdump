@@ -116,19 +116,19 @@
    "provides" : {
       "App::colourhexdump" : {
          "file" : "lib/App/colourhexdump.pm",
-         "version" : "1.000000"
+         "version" : "1.000001"
       },
       "App::colourhexdump::ColourProfile" : {
          "file" : "lib/App/colourhexdump/ColourProfile.pm",
-         "version" : "1.000000"
+         "version" : "1.000001"
       },
       "App::colourhexdump::DefaultColourProfile" : {
          "file" : "lib/App/colourhexdump/DefaultColourProfile.pm",
-         "version" : "1.000000"
+         "version" : "1.000001"
       },
       "App::colourhexdump::Formatter" : {
          "file" : "lib/App/colourhexdump/Formatter.pm",
-         "version" : "1.000000"
+         "version" : "1.000001"
       }
    },
    "release_status" : "stable",
@@ -143,7 +143,7 @@
          "web" : "https://github.com/kentnl/App-colourhexdump"
       }
    },
-   "version" : "1.000000",
+   "version" : "1.000001",
    "x_BuiltWith" : {
       "modules" : {
          "CPAN::Meta" : "2.142690",
@@ -235,7 +235,7 @@
          "osname" : "linux"
       },
       "platform" : "linux",
-      "uname" : "Linux 3.16.1-aufs x86_64 GenuineIntel GNU/Linux"
+      "uname" : "Linux 3.17.1-aufs x86_64 GenuineIntel GNU/Linux"
    },
    "x_Dist_Zilla" : {
       "perl" : {
@@ -679,7 +679,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "1.000000-source",
+                  "tag" : "1.000001-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -750,7 +750,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : "releases",
                   "signed" : 0,
-                  "tag" : "1.000000",
+                  "tag" : "1.000001",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

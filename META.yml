@@ -18,16 +18,16 @@ name: App-colourhexdump
 provides:
   App::colourhexdump:
     file: lib/App/colourhexdump.pm
-    version: '1.000000'
+    version: '1.000001'
   App::colourhexdump::ColourProfile:
     file: lib/App/colourhexdump/ColourProfile.pm
-    version: '1.000000'
+    version: '1.000001'
   App::colourhexdump::DefaultColourProfile:
     file: lib/App/colourhexdump/DefaultColourProfile.pm
-    version: '1.000000'
+    version: '1.000001'
   App::colourhexdump::Formatter:
     file: lib/App/colourhexdump/Formatter.pm
-    version: '1.000000'
+    version: '1.000001'
 requires:
   Carp: '0'
   Getopt::Long::Descriptive: '0'
@@ -46,7 +46,7 @@ resources:
   bugtracker: https://github.com/kentnl/App-colourhexdump/issues
   homepage: https://github.com/kentnl/App-colourhexdump
   repository: https://github.com/kentnl/App-colourhexdump.git
-version: '1.000000'
+version: '1.000001'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142690'
@@ -134,7 +134,7 @@ x_BuiltWith:
     myarchname: x86_64-linux
     osname: linux
   platform: linux
-  uname: 'Linux 3.16.1-aufs x86_64 GenuineIntel GNU/Linux'
+  uname: 'Linux 3.17.1-aufs x86_64 GenuineIntel GNU/Linux'
 x_Dist_Zilla:
   perl:
     version: '5.021003'
@@ -476,7 +476,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 1.000000-source
+          tag: 1.000001-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -530,7 +530,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '1.000000'
+          tag: '1.000001'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local

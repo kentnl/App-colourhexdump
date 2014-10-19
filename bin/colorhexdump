@@ -6,7 +6,7 @@ use warnings;
 package    #  hide me
   App::colourhexdump::stub;
 
-our $VERSION = '1.000000';
+our $VERSION = '1.000001';
 
 # ABSTRACT: Command line stub for App::colourhexdump
 # PODNAME: colourhexdump
@@ -30,7 +30,7 @@ colourhexdump - Command line stub for App::colourhexdump
 
 =head1 VERSION
 
-version 1.000000
+version 1.000001
 
 =head1 AUTHOR
 
