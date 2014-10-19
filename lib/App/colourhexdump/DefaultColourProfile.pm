@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump::DefaultColourProfile;
 
-our $VERSION = '1.000001';
+our $VERSION = '1.000002';
 
 # ABSTRACT: The default colour profile
 
@@ -86,7 +86,7 @@ App::colourhexdump::DefaultColourProfile - The default colour profile
 
 =head1 VERSION
 
-version 1.000001
+version 1.000002
 
 =head1 SYNOPSIS
 

@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump::ColourProfile;
 
-our $VERSION = '1.000001';
+our $VERSION = '1.000002';
 
 # ABSTRACT: A Role for Colour Profiles
 
@@ -119,7 +119,7 @@ App::colourhexdump::ColourProfile - A Role for Colour Profiles
 
 =head1 VERSION
 
-version 1.000001
+version 1.000002
 
 =head1 SYNOPSIS
 
