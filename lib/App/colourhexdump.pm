@@ -19,32 +19,6 @@ use Term::ANSIColor 3.00 qw( colorstrip );
 use App::colourhexdump::Formatter;
 use namespace::autoclean;
 
-=head1 SYNOPSIS
-
-    usage: colourhexdump [-?Ccfrx] [long options...]
-        -? --usage --help                     Prints this usage information.
-        --color-profile -C --colour-profile   Backend to use for colour highlighting (DefaultColourProfile)
-        --row -r --row-length                 Number of bytes per display row (32).
-        --chunk -x --chunk-length             Number of bytes per display hex display group (4).
-        -f --file                             Add a file to the list of files to process. '-' for STDIN.
-        --show-file-prefix                    Enable printing the filename on the start of every line ( off ).
-        --show-file-heading                   Enable printing the filename before the hexdump output. ( off ).
-        --color -c --colour                   Enable coloured output ( on ). --no-colour to disable.
-
-It can be used like so
-
-    colourhexdump  file/a.txt file/b.txt -- --this-is-treated-like-a-file.txt
-
-If you are using an HTML-enabled POD viewer, you should see a screenshot of this in action:
-
-( Everyone else can visit L<http://kentnl.github.io/App-colourhexdump/media/Screenshot.png> )
-
-=for html <center><img src="http://kentnl.github.io/App-colourhexdump/media/Screenshot.png" alt="Screenshot with explanation of colours" width="826" height="838"/></center>
-
-
-
-=cut
-
 has colour_profile => (
   metaclass     => 'Getopt',
   isa           => 'Str',
@@ -191,3 +165,27 @@ sub run {
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
+
+=head1 SYNOPSIS
+
+    usage: colourhexdump [-?Ccfrx] [long options...]
+        -? --usage --help                     Prints this usage information.
+        --color-profile -C --colour-profile   Backend to use for colour highlighting (DefaultColourProfile)
+        --row -r --row-length                 Number of bytes per display row (32).
+        --chunk -x --chunk-length             Number of bytes per display hex display group (4).
+        -f --file                             Add a file to the list of files to process. '-' for STDIN.
+        --show-file-prefix                    Enable printing the filename on the start of every line ( off ).
+        --show-file-heading                   Enable printing the filename before the hexdump output. ( off ).
+        --color -c --colour                   Enable coloured output ( on ). --no-colour to disable.
+
+It can be used like so
+
+    colourhexdump  file/a.txt file/b.txt -- --this-is-treated-like-a-file.txt
+
+If you are using an HTML-enabled POD viewer, you should see a screenshot of this in action:
+
+( Everyone else can visit L<http://kentnl.github.io/App-colourhexdump/media/Screenshot.png> )
+
+=for html <center><img src="http://kentnl.github.io/App-colourhexdump/media/Screenshot.png" alt="Screenshot with explanation of colours" width="826" height="838"/></center>
+
+=cut
