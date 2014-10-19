@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:kentnl/App-colourhexdump.git
+	branch = images
+	commit = e89cf0f01c57f8de6b8394508fd3b4d2e65783f5
+	parent = 150a1bd612146721df1d7e553d5c315ac7891ba7
+	cmdver = 0.1.0
