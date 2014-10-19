@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump;
 
-our $VERSION = '1.000001';
+our $VERSION = '1.000002';
 
 # ABSTRACT: HexDump, but with character-class highlighting.
 
