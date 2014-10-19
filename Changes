@@ -1,6 +1,6 @@
 ﻿Revision history for App-colourhexdump
 
-1.000001 2014-10-13T23:44:22Z c22d2a9
+1.000001 2014-10-19T20:39:31Z c45b630
  [Bugfix]
  - Hyperlinks to preview images were missing due to path migration and gitsubmodule weirdness.
  - This closes #2 ( Thanks Ivan Baidakou for reporting )

@@ -19,32 +19,6 @@ use Term::ANSIColor 3.00 qw( colorstrip );
 use App::colourhexdump::Formatter;
 use namespace::autoclean;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 has colour_profile => (
   metaclass     => 'Getopt',
   isa           => 'Str',
