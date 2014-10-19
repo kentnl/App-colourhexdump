@@ -1,6 +1,9 @@
 ﻿Revision history for {{$dist->name}}
 
 {{$NEXT}}
+ [Bugfix]
+ - Hyperlinks to preview images were missing due to path migration and gitsubmodule weirdness.
+ - This closes #2 ( Thanks Ivan Baidakou for reporting )
 
 1.000000 2014-10-13T23:42:53Z 7b40123
  [00 Major - Version Scheme Change]
