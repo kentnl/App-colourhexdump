@@ -67,4 +67,3 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
 0.01000103 2010-12-20T19:02:48Z
  [Changed / runtime requires]
  - Term::ANSIColor 0 → 3.00
-
