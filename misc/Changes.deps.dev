@@ -1,6 +1,18 @@
 This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
 1.000002
+ [Added / develop recommends]
+ - Test::More 1.001014
+
+ [Added / develop requires]
+ - English
+ - Software::License::Perl_5
+ - Test::EOL
+ - Test::More 0.96
+
+ [Changed / develop suggests]
+ - Dist::Zilla::App::Command::bakeini 0.001002 → 0.002005
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.021000 → 2.025002
 
 1.000001 2014-10-19T20:42:11Z
 
