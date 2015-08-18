@@ -37,6 +37,9 @@ Invocation:
 
 with 'App::colourhexdump::ColourProfile';
 
+__PACKAGE__->meta->make_immutable;
+no Moose;
+
 use Term::ANSIColor 3.00 qw( BLACK ON_RED BOLD BRIGHT_BLUE BRIGHT_YELLOW ON_YELLOW RED BLUE YELLOW );
 
 =method get_colour_for
@@ -70,7 +73,5 @@ sub get_display_symbol_for {
   return $_[1];
 }
 
-__PACKAGE__->meta->make_immutable;
-no Moose;
 1;
 

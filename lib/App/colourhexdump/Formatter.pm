@@ -57,6 +57,9 @@ has hex_row_length => (
   init_arg   => undef,
 );
 
+__PACKAGE__->meta->make_immutable;
+no Moose;
+
 sub _build_hex_row_length {
   my $self = shift;
 
@@ -205,7 +208,5 @@ sub _build_real_colour_profile_class {
   return String::RewritePrefix->rewrite( { q{} => 'App::colourhexdump::', q{=} => q{} }, $self->colour_profile_class );
 }
 
-__PACKAGE__->meta->make_immutable;
-no Moose;
 1;
 

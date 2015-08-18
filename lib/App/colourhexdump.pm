@@ -83,6 +83,9 @@ has 'colour' => (
 
 );
 
+__PACKAGE__->meta->make_immutable;
+no Moose;
+
 =method BUILD
 
 This just pushes extra_argv from getopt into the files list.
@@ -162,8 +165,6 @@ sub run {
   return 1;
 }
 
-__PACKAGE__->meta->make_immutable;
-no Moose;
 1;
 
 =head1 SYNOPSIS

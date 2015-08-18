@@ -64,6 +64,8 @@ Returns a user viewable alternative to the matched string.
 
 requires 'get_display_symbol_for';
 
+no Moose::Role;
+
 use Term::ANSIColor 3.00 qw( RESET );
 
 =head1 PROVIDED
@@ -102,8 +104,6 @@ sub get_string_post {
   }
   return q{};
 }
-
-no Moose::Role;
 
 1;
 
