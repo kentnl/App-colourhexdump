@@ -14,7 +14,6 @@ use Moose qw( has );
 use String::RewritePrefix;
 use Module::Runtime qw( require_module );
 use Term::ANSIColor 3.00 qw( colorstrip );
-use List::MoreUtils qw( natatime );
 
 use namespace::autoclean;
 
@@ -146,9 +145,8 @@ sub format_row {
 
 sub hex_encode {
   my ( $self, @chars ) = @_;
-  my $it = natatime $self->chunk_length, @chars;
   my @out;
-  while ( my @vals = $it->() ) {
+  while ( my @vals = splice @chars, 0, $self->chunk_length, () ) {
     my $chunk;
     for (@vals) {
       $chunk .= $self->colour_profile->get_string_pre($_);

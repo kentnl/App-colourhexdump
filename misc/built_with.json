@@ -59,7 +59,6 @@
       "ExtUtils::MakeMaker" : "7.05_27",
       "File::Spec" : "3.56_02",
       "Getopt::Long::Descriptive" : "0.099",
-      "List::MoreUtils" : "0.413",
       "Module::Runtime" : "0.014",
       "Moose" : "2.1602",
       "Moose::Role" : "2.1602",
