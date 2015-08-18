@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump::Formatter;
 
-our $VERSION = '1.000001';
+our $VERSION = '1.000002';
 
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
@@ -14,7 +14,6 @@ use Moose qw( has );
 use String::RewritePrefix;
 use Module::Runtime qw( require_module );
 use Term::ANSIColor 3.00 qw( colorstrip );
-use List::MoreUtils qw( natatime );
 
 use namespace::autoclean;
 
@@ -57,6 +56,9 @@ has hex_row_length => (
   lazy_build => 1,
   init_arg   => undef,
 );
+
+__PACKAGE__->meta->make_immutable;
+no Moose;
 
 sub _build_hex_row_length {
   my $self = shift;
@@ -146,9 +148,8 @@ sub format_row {
 
 sub hex_encode {
   my ( $self, @chars ) = @_;
-  my $it = natatime $self->chunk_length, @chars;
   my @out;
-  while ( my @vals = $it->() ) {
+  while ( my @vals = splice @chars, 0, $self->chunk_length, () ) {
     my $chunk;
     for (@vals) {
       $chunk .= $self->colour_profile->get_string_pre($_);
@@ -207,8 +208,6 @@ sub _build_real_colour_profile_class {
   return String::RewritePrefix->rewrite( { q{} => 'App::colourhexdump::', q{=} => q{} }, $self->colour_profile_class );
 }
 
-__PACKAGE__->meta->make_immutable;
-no Moose;
 1;
 
 __END__
@@ -223,7 +222,7 @@ App::colourhexdump::Formatter - Colour-Highlight lines of data as hex.
 
 =head1 VERSION
 
-version 1.000001
+version 1.000002
 
 =head1 METHODS
 
@@ -260,7 +259,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2015 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

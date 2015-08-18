@@ -1,6 +1,16 @@
 This file contains changes in REQUIRED dependencies for standard CPAN phases (configure/build/runtime/test)
 
-1.000001
+1.000002
+ [Added / configure requires]
+ - perl 5.006
+
+ [Added / test requires]
+ - perl 5.006
+
+ [Removed / runtime requires]
+ - List::MoreUtils
+
+1.000001 2014-10-19T20:42:11Z
 
 1.000000 2014-10-13T23:42:53Z
  [Added / configure requires]
@@ -65,4 +75,3 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
 0.01000103 2010-12-20T19:02:48Z
  [Changed / runtime requires]
  - Term::ANSIColor 0 → 3.00
-

@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump;
 
-our $VERSION = '1.000001';
+our $VERSION = '1.000002';
 
 # ABSTRACT: HexDump, but with character-class highlighting.
 
@@ -82,6 +82,9 @@ has 'colour' => (
   documentation => 'Enable coloured output ( on ). --no-colour to disable.',
 
 );
+
+__PACKAGE__->meta->make_immutable;
+no Moose;
 
 
 
@@ -162,8 +165,6 @@ sub run {
   return 1;
 }
 
-__PACKAGE__->meta->make_immutable;
-no Moose;
 1;
 
 __END__
@@ -178,7 +179,7 @@ App::colourhexdump - HexDump, but with character-class highlighting.
 
 =head1 VERSION
 
-version 1.000001
+version 1.000002
 
 =head1 SYNOPSIS
 
@@ -228,7 +229,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2015 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
