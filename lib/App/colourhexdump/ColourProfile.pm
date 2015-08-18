@@ -29,29 +29,6 @@ use namespace::autoclean;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 requires 'get_colour_for';
 
 
@@ -63,6 +40,8 @@ requires 'get_colour_for';
 
 
 requires 'get_display_symbol_for';
+
+no Moose::Role;
 
 use Term::ANSIColor 3.00 qw( RESET );
 
@@ -102,8 +81,6 @@ sub get_string_post {
   }
   return q{};
 }
-
-no Moose::Role;
 
 1;
 
