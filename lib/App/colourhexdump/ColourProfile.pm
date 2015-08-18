@@ -13,9 +13,7 @@ our $VERSION = '1.000002';
 use Moose::Role qw( requires );
 use namespace::autoclean;
 
-=head1 REQUIRED
-
-=head2 get_colour_for
+=requires C<get_colour_for>
 
     my $colour = $object->get_colour_for( "\n" );
 
@@ -31,7 +29,7 @@ Return C<undef> if you do not wish to apply colouring.
 
 requires 'get_colour_for';
 
-=head2 get_display_symbol_for
+=requires C<get_display_symbol_for>
 
     my $symbol = $object->get_display_symbol_for( "\n" );
 
@@ -45,9 +43,7 @@ no Moose::Role;
 
 use Term::ANSIColor 3.00 qw( RESET );
 
-=head1 PROVIDED
-
-=head2 get_string_pre
+=method C<get_string_pre>
 
 Wraps L</get_colour_for> and returns either a string sequence or ''.
 
@@ -64,7 +60,7 @@ sub get_string_pre {
   return q{};
 }
 
-=head2 get_string_post
+=method C<get_string_post>
 
 Wraps L</get_colour_for> and returns either an ANSI Reset Code, or '', depending
 on what was returned.
