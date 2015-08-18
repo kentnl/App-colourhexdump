@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump::ColourProfile;
 
-our $VERSION = '1.000002';
+our $VERSION = '1.000003';
 
 # ABSTRACT: A Role for Colour Profiles
 

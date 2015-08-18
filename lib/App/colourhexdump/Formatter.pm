@@ -4,7 +4,7 @@ use warnings;
 
 package App::colourhexdump::Formatter;
 
-our $VERSION = '1.000002';
+our $VERSION = '1.000003';
 
 # ABSTRACT: Colour-Highlight lines of data as hex.
 
