@@ -13,28 +13,6 @@ our $VERSION = '1.000002';
 use Moose qw( has with );
 use namespace::autoclean;
 
-=head1 SYNOPSIS
-
-This is the default colour profile.
-
-    \r           => black on red               '_'
-    \n           => bold bright blue           '_'
-    " "          => blue                       '_'
-    \t           => bold bright blue on yellow '_'
-    alphanumeric => white                      $char
-    nonprintable => red                        '.'
-    everything else => yellow                  $char
-
-Invocation:
-
-    my $cp = App::colourhexdump::DefaultColourProfile->new();
-    my $colouredChar =
-        $cp->get_string_pre( $char ) .
-        $cp->get_dispaly_symbol_for( $char ) .
-        $cp->get_string_post( $char );
-
-=cut
-
 with 'App::colourhexdump::ColourProfile';
 
 __PACKAGE__->meta->make_immutable;
@@ -74,4 +52,26 @@ sub get_display_symbol_for {
 }
 
 1;
+
+=head1 SYNOPSIS
+
+This is the default colour profile.
+
+    \r           => black on red               '_'
+    \n           => bold bright blue           '_'
+    " "          => blue                       '_'
+    \t           => bold bright blue on yellow '_'
+    alphanumeric => white                      $char
+    nonprintable => red                        '.'
+    everything else => yellow                  $char
+
+Invocation:
+
+    my $cp = App::colourhexdump::DefaultColourProfile->new();
+    my $colouredChar =
+        $cp->get_string_pre( $char ) .
+        $cp->get_dispaly_symbol_for( $char ) .
+        $cp->get_string_post( $char );
+
+=cut
 

@@ -209,4 +209,3 @@ sub _build_real_colour_profile_class {
 }
 
 1;
-

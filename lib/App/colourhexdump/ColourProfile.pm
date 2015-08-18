@@ -13,29 +13,6 @@ our $VERSION = '1.000002';
 use Moose::Role qw( requires );
 use namespace::autoclean;
 
-=head1 SYNOPSIS
-
-    package App::colourhexdump::ColourProfileName
-
-    use Moose;
-    with qw( App::colourhexdump::ColourProfile );
-
-    sub get_colour_for {
-        my ( $self, $char ) = @_ ;
-        ...
-        return "\e[31m" if /badthings/;
-        return undef;    # don't colour
-    }
-    sub get_display_symbol_for {
-        my ($self, $char) = @_ ;
-        ...
-        return '.' if $char =~ /badthings/
-        return $char;        # printable
-    }
-
-
-=cut
-
 =head1 REQUIRED
 
 =head2 get_colour_for
@@ -107,3 +84,25 @@ sub get_string_post {
 
 1;
 
+=head1 SYNOPSIS
+
+    package App::colourhexdump::ColourProfileName
+
+    use Moose;
+    with qw( App::colourhexdump::ColourProfile );
+
+    sub get_colour_for {
+        my ( $self, $char ) = @_ ;
+        ...
+        return "\e[31m" if /badthings/;
+        return undef;    # don't colour
+    }
+    sub get_display_symbol_for {
+        my ($self, $char) = @_ ;
+        ...
+        return '.' if $char =~ /badthings/
+        return $char;        # printable
+    }
+
+
+=cut
