@@ -178,4 +178,3 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
 0.01000103 2010-12-20T19:02:48Z
  [Changed / runtime requires]
  - Term::ANSIColor 0 → 3.00
-
