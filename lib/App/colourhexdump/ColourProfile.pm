@@ -27,8 +27,6 @@ use namespace::autoclean;
 
 
 
-
-
 requires 'get_colour_for';
 
 
@@ -44,8 +42,6 @@ requires 'get_display_symbol_for';
 no Moose::Role;
 
 use Term::ANSIColor 3.00 qw( RESET );
-
-
 
 
 
@@ -118,9 +114,9 @@ version 1.000002
         return $char;        # printable
     }
 
-=head1 REQUIRED
+=head1 REQUIRED METHODS
 
-=head2 get_colour_for
+=head2 C<get_colour_for>
 
     my $colour = $object->get_colour_for( "\n" );
 
@@ -132,19 +128,19 @@ Don't worry about resetting things, we put a C<^[[0m> in for you.
 
 Return C<undef> if you do not wish to apply colouring.
 
-=head2 get_display_symbol_for
+=head2 C<get_display_symbol_for>
 
     my $symbol = $object->get_display_symbol_for( "\n" );
 
 Returns a user viewable alternative to the matched string.
 
-=head1 PROVIDED
+=head1 METHODS
 
-=head2 get_string_pre
+=head2 C<get_string_pre>
 
 Wraps L</get_colour_for> and returns either a string sequence or ''.
 
-=head2 get_string_post
+=head2 C<get_string_post>
 
 Wraps L</get_colour_for> and returns either an ANSI Reset Code, or '', depending
 on what was returned.
