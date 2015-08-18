@@ -13,7 +13,6 @@ copyright_holder = Kent Fredric <kentnl@cpan.org>
 bumpversions = 1
 normal_form  = numify
 mantissa     = 6
-copyfiles    = LICENSE
 srcreadme    = mkdn
 toolkit      = eumm
 toolkit_hardness = soft
