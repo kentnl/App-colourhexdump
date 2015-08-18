@@ -20,16 +20,16 @@ name: App-colourhexdump
 provides:
   App::colourhexdump:
     file: lib/App/colourhexdump.pm
-    version: '1.000002'
+    version: '1.000003'
   App::colourhexdump::ColourProfile:
     file: lib/App/colourhexdump/ColourProfile.pm
-    version: '1.000002'
+    version: '1.000003'
   App::colourhexdump::DefaultColourProfile:
     file: lib/App/colourhexdump/DefaultColourProfile.pm
-    version: '1.000002'
+    version: '1.000003'
   App::colourhexdump::Formatter:
     file: lib/App/colourhexdump/Formatter.pm
-    version: '1.000002'
+    version: '1.000003'
 recommends:
   Moose: '2.000'
 requires:
@@ -49,4 +49,4 @@ resources:
   bugtracker: https://github.com/kentnl/App-colourhexdump/issues
   homepage: https://github.com/kentnl/App-colourhexdump
   repository: https://github.com/kentnl/App-colourhexdump.git
-version: '1.000002'
+version: '1.000003'
