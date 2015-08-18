@@ -1,12 +1,16 @@
 ﻿Revision history for App-colourhexdump
 
-1.000002 2015-08-18T05:34:23Z 9663749
+1.000002 2015-08-18T05:37:10Z 45f0c28
  [Dependencies::Stats]
  - Dependencies changed since 1.000001, see misc/*.deps* for details
  - configure: +1 (recommends: ↑1)
  - develop: +11 ↑2 -3 (recommends: +1, suggests: ↑2)
  - runtime: -1 (recommends: +1)
  - test: +1 (recommends: ↑1 ↓1)
+
+ [Minor]
+ - code shuffled to reduce whitespace
+ - dependency on List::MoreUtils removed.
 
 1.000001 2014-10-19T20:42:11Z 7cfeaa2
  [Bugfix]
