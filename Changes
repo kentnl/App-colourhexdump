@@ -1,6 +1,8 @@
-﻿Revision history for {{$dist->name}}
+Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.000003 2017-03-07T09:36:52Z 76602c8
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
 
  [Dependencies::Stats]
