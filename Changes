@@ -1,5 +1,7 @@
 Revision history for App-colourhexdump
 
+1.000004 2017-03-07T09:37:39Z 5297ae4
+
 1.000003 2017-03-07T09:36:52Z 76602c8
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
 

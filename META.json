@@ -132,19 +132,19 @@
    "provides" : {
       "App::colourhexdump" : {
          "file" : "lib/App/colourhexdump.pm",
-         "version" : "1.000003"
+         "version" : "1.000004"
       },
       "App::colourhexdump::ColourProfile" : {
          "file" : "lib/App/colourhexdump/ColourProfile.pm",
-         "version" : "1.000003"
+         "version" : "1.000004"
       },
       "App::colourhexdump::DefaultColourProfile" : {
          "file" : "lib/App/colourhexdump/DefaultColourProfile.pm",
-         "version" : "1.000003"
+         "version" : "1.000004"
       },
       "App::colourhexdump::Formatter" : {
          "file" : "lib/App/colourhexdump/Formatter.pm",
-         "version" : "1.000003"
+         "version" : "1.000004"
       }
    },
    "release_status" : "stable",
@@ -159,7 +159,7 @@
          "web" : "https://github.com/kentnl/App-colourhexdump"
       }
    },
-   "version" : "1.000003",
+   "version" : "1.000004",
    "x_BuiltWith" : {
       "external_file" : "misc/built_with.json"
    },
@@ -687,7 +687,7 @@
                   "branch" : null,
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "1.000003-source",
+                  "tag" : "1.000004-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v"
                },
@@ -781,7 +781,7 @@
                   "branch" : "releases",
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "1.000003",
+                  "tag" : "1.000004",
                   "tag_format" : "%v",
                   "tag_message" : "v%v"
                },
